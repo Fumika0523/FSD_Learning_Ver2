@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age=prompt("What is your age?")
+        console.log(age)
+
+        let p = new Promise((resolve,reject)=>{
+            if(age<18){
+                reject("You are not eligible to vote")
+            }
+            else if(age>65){
+                resolve("You are senior cictizen")
+            }
+            else{
+                resolve("you are eligible to vote")
+            }
+        })
+        console.log(p)
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //https://openweathermap.org/current
+     let apiKey='68efa0885519a6f01d76917c463ada68'
+    //https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=68efa0885519a6f01d76917c463ada68
+    let url=`https://api.openweathermap.org/data/2.5/weather?q=Japan&appid=68efa0885519a6f01d76917c463ada68`
+    
+    async function test(){
+    let res=await fetch(url)
+    let data=await res.json()
+    console.log(data)
+    }
+    test()
+    
+    </script>
+</body>
+</html>

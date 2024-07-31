@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque inventore facere non eum aliquid qui quas, quod, Lorem eius nihil ipsam unde ratione, Lorem tempore enim? Quas, libero nam. Fugit, accusantium beatae? Lorem Lorem Lorem
+    </p>
+    <script>
+        let ptag=document.getElementById(`test`)
+        console.log(ptag)//ptag
+        console.log(ptag.innerHTML)//existing test of ptag
+        let a=ptag.innerHTML.replaceAll(`Lorem`,`Fumika`)
+        console.log(a)//new text after replace
+
+        //in the same ptag we want to update the replaced with the new text
+        ptag.innerHTML=a
+
+        //html css javascript
+        //website > javascript = service page
+        
+        
+    </script>
+</body>
+</html>

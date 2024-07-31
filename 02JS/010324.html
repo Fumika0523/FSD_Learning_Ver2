@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//////////squre
+
+function square(a){
+return a*a
+}
+var squareans=square(10)
+ console.log(squareans)
+
+///////////////////////////////////////////
+//cube
+
+function cube(a){
+return a*a*a
+    }
+var cubeans=cube(squareans)
+console.log(cubeans)
+/////////////////////////
+
+//normal function
+let abc=function(){
+    console.log("Annonymous Function")
+}
+abc()
+
+////display name function
+
+let display=function(){
+    console.log("Fumika,Tokyo")
+    console.log(3+3)
+}
+display()
+
+///////////////////////////////
+
+//function with parameter > annonemous
+
+let addNum=function(){
+console.log()
+}
+addNum()
+///////////////////////
+
+let addNum1=function(a,b){
+    console.loga+(b)
+}
+addNum1(3,4)
+
+//cube of any numbber
+let cubeNum=function(a){
+    console.log(a*a*a)
+}
+cubeNum(6)
+
+//square of a number
+let squareNum=function(a){
+    console.log(a*a)
+}
+squareNum(6)
+
+
+//factorial of any given Number
+
+//5> 5*4*3*2*1=120
+
+let factNum=function(a){
+    var fact = 1
+    for(var i=1;i<=a;i++){
+        fact=fact*i
+    }
+    console.log(fact)
+}
+factNum(5)
+
+/////////
+
+let factNum1=function(a){
+    var fact=1
+    for(var i=1;i<=a;i++){
+        fact=fact*i
+    }
+//console.log(fact)
+return fact
+}
+let factans1=factNum1(4)
+console.log(factans1)
+console.log(1*2*3*4)
+
+////////annoymous function with return
+//// can you do that e m s calculate percentage
+
+let score=function(e,m,s){
+    return e+m+s
+    }
+    var total=score(80,90,70)
+    console.log(total)
+
+
+
+let percentage=function(x){
+    return (x/300)*100
+}
+var per=percentage(total)
+console.log(per)
+//squareofnumber ----> 4
+
+let squareNum1=function(a){
+    return a*a
+}
+var squareAns1=squareNum1(2)
+console.log(squareAns1)
+
+//out put of square function to be passed to cube function to find out the cube loop
+//cube
+
+let cube1=function(a){
+    return a*a*a
+}
+var cubetotal=cube1(squareAns1)
+console.log(cubetotal)
+console.log(4*4*4)
+
+///1. calculate the squre >op
+
+let squareNum2=function(s){
+    return s*s
+}
+var squareAns2=squareNum2(2)
+console.log(squareAns2)
+
+//2. calculate the cube
+
+let cube2=function(s){
+    return s*s*s
+}
+var cubetotal1=cube2(squareAns2)
+console.log(cubetotal1)
+
+//////3.
+
+let calcufact=function(s){
+    var fact=1
+    for(var i=1;i<=s;i++){
+    fact=fact*i
+    }
+    //console.log(fact)
+    return fact
+}
+let factans3=calcufact(cubetotal1)
+console.log(factans3)
+
+//
+
+
+//calculate total array elements using annonymous function
+
+let calcuarr = function(v){
+var sum=0;
+for(var i=0; i<v.length;i++){
+    sum=sum+v[i]
+}
+return sum
+}
+
+let arr=[2,4,5,8,9,10]
+let totalarr=calcuarr(arr)
+console.log(totalarr)
+
+//////
+
+
+
+</script>
+</body>
+</html>

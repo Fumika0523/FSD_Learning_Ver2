@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+//concat()--join together the more than 2 strings and return to Array--return array
+let str6 = 'Hello';
+let str7 = 'World';
+console.log(str6.concat(str7))
+console.log(str6.concat(" ",str7,"My name is Fumika"))
+
+//endWith()-- depending on the arguments you provided inside() if string ends with that character/words--return type: boolean
+// you can put space, instead of puttig
+//endwith() //boolean vallue > truel or false / depending upon the argues you provided inside it so if string ends with that character/word > true
+let str10="The String object is used"
+console.log(str10.endsWith("used"))
+
+
+let str11="The String object is used?"//return the boolean value//depending on argument
+console.log(str11.endsWith("used"))
+console.log(str11.endsWith("?"))
+
+
+let str12="Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation."
+console.log(str12.endsWith("."))
+console.log(str12.endsWith("Foundation."))//argument you provided inside it
+
+let str13="Hello World?"
+console.log(str13.endsWith("?"))
+
+//slice()--return the string start position & end position -start position is included & end position is excluded- return string
+//slice > peice of cake  
+//counts the spaces
+var str78="Thequick brown fox jumps"
+console.log(str78.slice(1,4))
+console.log(str78.slice(1,7)) // 1 included 7 exculded > 1-6 values you are getting
+
+console.log(str78.slice(8,12)) 
+
+//start posistion
+console.log(str78.slice(1)) // from the start position it will return everything
+
+console.log(str78.slice(8)) 
+
+const str178 = "The morning is upon us.";
+console.log(str178.slice(1, 8))
+console.log(str178.slice(4,5))
+console.log(str178.slice(12))
+console.log( str178.slice(30))
+
+//substring()--return the string start position(included) & end position (exclused)
+const str179 = 'Mozilla'; // start posotion || end posistion
+
+console.log(str179.substring(1, 3)) // start index included and end index excluded
+// Expected output: "oz"
+
+console.log(str179.substring(2));// start index and it goes to the end
+// Expected output: "zilla"
+
+const str180 = "The morning is upon us.";
+console.log(str180.substring(0, 8)+"...")
+console.log(str180.substring(1, 8))//he morn
+console.log(str180.substring(4,5))// m
+console.log(str180.substring(12))// is upon us.
+console.log( str180.substring(30))// 
+
+const str200 = "Peter Jackson's expansive remake of the 1933 classic follows director Carl Denham (Jack Black) and his crew on a journey from New York City to the ominous Skull Island to film a new movie. Accompanying him are playwright Jack Driscoll (Adrien Brody) and actress Ann Darrow (Naomi Watts), who is whisked away by the monstrous ape, Kong, after they reach the island. The crew encounters dinosaurs and other creatures as they race to rescue Ann, while the actress forms a bond with her simian captor."
+
+console.log(str200.length)//497
+console.log(str200.substring(0,188))
+
+const str201="A hunter's life takes a drastic turn when he discovers two million dollars while strolling through the aftermath of a drug deal. He is then pursued by a psychopathic killer who wants the"
+console.log(str201.length)
+
+const str300="With the world now aware that he is Iron Man, billionaire inventor Tony Stark (Robert Downey Jr.) faces pressure from all sides to share his technology with the military. He is reluctant t"
+console.log(str300.length)
+
+const str400 = "Marvel's The Avengers (classified under the name Marvel Avengers Assemble in the United Kingdom and Ireland), or simply The Avengers, is a 2012 American superhero film based on the Marvel"
+console.log(str400.length)
+
+const str500=" He is reluctant t"
+console.log(" He is reluctant t".length)
+</script>
+</body>
+</html>

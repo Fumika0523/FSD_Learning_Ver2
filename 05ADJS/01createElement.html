@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+   
+</head>
+<style>
+    #idSection{background-color: red;}
+
+    .container{
+        border: 2px solid black;
+    }
+
+</style>
+<body>
+    Hello
+    <!-- <p>Hi Hello World from HTML</p>
+    <div>Hello World from HTML2</div> -->
+    <!-- Starting -->
+    <!-- <div>
+        <div>
+            <div>
+                <p>I am New to This DOM!!</p>
+            </div>
+        </div>
+    </div> -->
+    <!-- Ending -->
+    <!-- Start2 -->
+    <div>
+        <h1>Heading1</h1>
+        <h2>Heading2</h2>
+        <h3>Heading3</h3>
+        <div>
+            <h4>Heading1-DIV</h4>
+        </div>
+    </div>
+    <!-- Ending2 -->
+    <script>
+        
+        //3 KEYWORDS TO DECLEAR IN JS
+        //var let const
+        //let const
+        
+        //let paraTest=document
+        // console.log(document)
+        // console.log(document.head)
+        // console.log(document.title)
+        // console.log(document.body)
+
+        // //create a p tage dynamitically
+        // //create Element > Tag + Content
+        // let paraTest=document.createElement("p")
+        // console.log(paraTest)
+        // paraTest.innerHTML="Hello World From JS"
+        // console.log(paraTest)
+        // //apend()
+        // //document > body
+        // document.body.append(paraTest)
+        
+        ////
+        // let divTest=document.createElement("div")
+        // console.log(divTest)
+        // divTest.innerHTML="Hello from JS2"
+        // console.log(divTest)
+        // document.body.append(divTest)
+        ///
+
+        // let divTest1=document.createElement("div")
+        // console.log(divTest1)
+
+        // let divTest2=document.createElement("div")
+        // console.log(divTest2)
+        // let divTest3=document.createElement("div")
+        // console.log(divTest3)
+        // let paraTest4=document.createElement("p")
+        // console.log(paraTest4)
+        // paraTest4.innerHTML="I am New to This DOM!! JS"
+        // document.body.append(divTest1)
+        // divTest1.append(divTest2)
+        // divTest2.append(divTest3)
+        // divTest3.append(paraTest4)
+
+        // let divTest1=document.createElement("div")
+        // let h1Test2=document.createElement("h1")
+        // let h2Test3=document.createElement("h2")
+        // let h3Test4=document.createElement("h3")
+        // let divTest5=document.createElement("div")
+        // let h4Test6=document.createElement("h4")
+
+        // h1Test2.innerHTML="Heading1"
+        // h2Test3.innerHTML="Heading2"
+        // h3Test4.innerHTML="Heading3"
+        // h4Test6.innerHTML="Heading1-DIV"
+
+        // document.body.append(divTest1)
+        // divTest1.append(h1Test2,h2Test3,h3Test4,divTest5)
+        // divTest5.append(h4Test6)
+
+        ////
+        let divTest3=document.createElement("div")
+        console.log(divTest3)
+        divTest3.innerTest="<h1>ABC</h1>"
+        document.body.append(divTest3)
+
+        let divTest4=document.createElement("div")
+        console.log(divTest4)
+        divTest4.innerHTML=`<h1>ABCC<h1>
+                            <h1>ABC</h1>`
+        document.body.append(divTest4)
+
+        let divTest5=document.createElement("div")
+        divTest5.innerHTML=`
+                <h1>NewHeading1</h1>
+                <h2>NewHeading2</h2>
+                <h3>NewHeading3</h3>
+                <div id="newHeading">
+                    <h4>NewHeading1-DIV</h4>
+                </div>
+                `
+
+        document.body.append(divTest5)
+                            
+// setAttribute("AttributeName","attributeValue")
+let divTest6=document.createElement("div")
+divTest6.innerText="Setting the Attribute"
+divTest6.setAttribute("id","idSection")
+divTest6.setAttribute("class","classSection")
+document.body.append(divTest6)
+
+let anchorTest6=document.createElement("a")
+anchorTest6.innerTest="Setting the HREF"
+anchorTest6.setAttribute("id","idSection")
+anchorTest6.setAttribute("class","classSection")
+anchorTest6.setAttribute("href","www.google.com")
+document.body.append(anchorTest6)
+
+let divTest7=document.createElement("div")
+divTest7.setAttribute("class","container")
+document.body.append(divTest7)
+console.log(divTest7)
+
+let h1Test8=document.createElement("h1")
+h1Test8.setAttribute("class","heading")
+h1Test8.innerText="Japan"
+divTest7.append(h1Test8)
+
+let h2Test9=document.createElement("h2")
+h2Test9.setAttribute("class","heading")
+h2Test9.innerText="India"
+divTest7.append(h2Test9)
+
+let h3Test10=document.createElement("h3")
+h3Test10.setAttribute("class","heading")
+h3Test10.innerText="France"
+divTest7.append(h3Test10)
+
+let divTest11=document.createElement("div")
+divTest11.setAttribute("id","subContainer")
+divTest7.append(divTest11)
+
+let h4Test12=document.createElement("h4")
+h4Test12.setAttribute("class","heading")
+h4Test12.innerTest="Italy"
+divTest11.append(h4Test12)
+
+// Add Style as well in JS
+
+let p100=document.createElement("p")
+p100.innerTest="Hello world hello world hello world hello world"
+p100.style.border="3px solid black";
+p100.style.width="400px";
+p100.style.padding="10px";
+p100.style.borderRadius="5%";
+p100.style.backgroundColor="green"
+p100.style.marginLeft="5px"
+
+document.body.append(p100)
+</script>
+</body>
+</html>

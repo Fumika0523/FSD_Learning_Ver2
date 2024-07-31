@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bordercommon{
+            width:100px;
+            background-color:rgb(235, 204, 118);
+            color:white;
+        }
+
+        .bordertest01{
+            border:3px solid red;
+            /* borderwidth borderstyle bordercolor */
+        }
+
+        .bordertest02{
+            border-width:4px;
+            border-style:groove;
+            border-color:blue;
+        }
+
+        .bordertest03{
+            border-style:dashed;
+            border-color:brown;
+            border-top-width:6px;
+            border-bottom-width:5px;
+            border-left-width:6px;
+            border-right-width: 5px;
+        }
+
+        .bordertest04{
+            border-style:dotted;
+            border-color:navy;
+            border-top-width:6px;
+            border-bottom-width:5px;
+            border-left-width:6px;
+            border-right-width: 5px;
+        }
+
+        .bordertest05{
+            border-top-width:6px;
+            border-bottom-width: 5px;
+            border-left-width: 6px;
+            border-right-width: 5px;
+
+            border-color:chartreuse;
+
+            border-top-style: dashed;
+            border-bottom-style:groove;
+            border-left-style:solid;
+            border-right-style:dotted;
+
+        }
+
+        .bordertest06{
+             border-top-width:6px;
+            border-bottom-width:5px;
+            border-left-width:6px;
+            border-right-width: 5px;
+
+            border-top-style:dashed;
+            border-bottom-style:groove;
+            border-left-style:solid;
+            border-right-style:dotted;
+
+            border-top-color:red;
+            border-bottom-color:pink;
+            border-left-color:yellow;
+            border-right-color:purple;
+        }
+
+        .bordertest07{
+            border-width:8px 4px;
+            /* tb 8 lr 4 */
+            border-top-style:dashed;
+            border-bottom-style:groove;
+            border-left-style:solid;
+            border-right-style:dotted;
+
+            border-top-color:red;
+            border-bottom-color:pink;
+            border-left-color:yellow;
+            border-right-color:purple;
+        }
+
+        .bordertest08{
+            border-width:7px 4px 5px 2px;
+            /* t 7 r 4 b 5 l 2 */
+            border-top-style: solid;
+            border-bottom-style:dotted;
+            border-left-style: solid;
+            border-right-style: dotted;
+
+            border-top-color:red;
+            border-bottom-color:navy;
+            border-left-color:green;
+            border-right-color:brown;
+        }
+
+        .bordertest09{
+            border-width: 5px 6px 7px;
+            /* t 5px r6px 7px 5px */
+            border-top-style: dashed;
+            border-bottom-style: groove;
+            border-left-style: solid;
+            background-origin: solid;
+
+            border-top-color:blueviolet;
+            border-bottom-color: chartreuse;
+            border-left-color: darkgreen;
+            border-right-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- Padding: Covered
+    Border:
+    Margin -->
+
+    <p class="bordertest01 bordercommon">Hello World01</p>
+    <p class="bordertest02 bordercommon">Hello World02</p>
+    <p class="bordertest03 bordercommon">Hello World03</p>
+    <p class="bordertest04 bordercommon">Hello World04</p>
+    <p class="bordertest05 bordercommon">Hello World05</p>
+    <p class="bordertest06 bordercommon">Hello World06</p>
+    <p class="bordertest07 bordercommon">Hello World07</p>
+    <p class="bordertest08 bordercommon">Hello World07</p>
+    <p class="bordertest09 bordercommon">Hello World07</p>
+</body>
+</html>

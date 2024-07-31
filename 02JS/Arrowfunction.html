@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//Arrow functions
+//short hands
+//=>
+//similar to annonymous function but not exactly annonymomus
+//entire function, we are going to store in variab le
+//function doesnt have a name
+//we dont use function keyword as well
+//we directly use(), after the paraenthesis, =>symbol after it is followed by flower braces{}
+//we call/invoke the function by the variable name
+
+
+//syntax;
+//let arrwfunction=()=>{}
+//arrwfunction()
+
+let arrwfunction=()=>{console.log("Arrowfunction")}
+arrwfunction()
+
+//2+2
+
+let addfunction=()=>{console.log(2+2)}
+addfunction()
+
+function justnormal(){
+    console.log(2+2)
+}
+justnormal()
+
+let addfunction1=()=>console.log(2+3)
+addfunction1()
+//short hand
+//other feature
+//if the function is small(execute in 1 lione), then no need of {} braces
+// if multiple linees, then we need{} braces
+
+let addfunctionmultiple=()=>{
+    console.log(2+3)
+    console.log(5+6)
+}
+addfunctionmultiple()
+
+// cube and square
+//create separate arrow funtion, in one line try to finish
+
+//squre
+let square=()=>console.log(2*2)
+square()
+
+
+//cube
+let cube=()=>console.log(2*2*2)
+cube()
+
+/////// let calculate in 1 function
+
+let squareandcube=()=>{
+    console.log(2*2)
+    console.log(2*2*2)
+}
+squareandcube()
+
+///// calculate with parameter and arguments
+//square
+
+let arrwsquareNum=(x)=>console.log(x*x)
+arrwsquareNum(2)
+
+//cube
+
+let arrwcubeNum=(y)=>console.log(y*y*y)
+arrwcubeNum(3)
+
+//review square
+let square1=()=>console.log(3*3)
+square1()
+
+//review cube
+let cube1=()=>console.log(2*2*2)
+cube1()
+
+//arrow square review
+let arrwsquareNum1=(x)=>console.log(x*x)
+arrwsquareNum1(3)
+
+//arrow cube review
+let arrwcubeNum1=(x)=>console.log(x*x*x)
+arrwcubeNum1(3)
+
+//return keyword -- dont use {}
+
+let singlearrwfun=()=>2
+let sqx=singlearrwfun()
+console.log(sqx)
+
+//multiple lines
+let multiarrowfun=()=>{
+    let a=20;
+    return a
+}
+console.log(multiarrowfun())
+
+/////////////
+//when we use return keyword, when to directly use the console.log
+//and when to store in an variable and console.log
+
+
+//not using an return keyword, print the val the inside the function
+
+//using return keyword, we return the value from the value
+//we want to use the return value, somewhere else, store it and use it somewhere
+//other you just console.log
+
+// total e+m+s
+
+let scorearrowfun=(e,m,s)=>{
+        return e+m+s
+}
+let total=scorearrowfun(80,70,90)
+   console.log(total)
+
+//
+let scoretotal=(e,m,s)=>console.log(e+m+s)
+scoretotal(80,70,90)
+
+///percentage
+
+let percentage=(x)=>{
+     return (x/300)*100
+}
+var per=percentage(total)
+console.log(per)
+
+//one line return
+
+let percentage1=(x)=>console.log(x/300*100)
+percentage1(total)
+
+
+// factorial + arrow function
+
+let factorialNum=(x)=>{
+    var fact=1
+    fact=fact*1
+    return fact
+}
+    for(var i=1;i<=x;i++)
+    var factans =factorialNum(5)
+    console.log(factans)
+
+////////////////////////////
+// let calcufact=function(s){
+   // var fact=1
+    //for(var i=1;i<=s;i++){
+    //fact=fact*i
+    //}
+    //return fact
+//}
+//let factans3=calcufact(cubetotal1)
+//console.log(factans3)
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+   function example1(a){
+    //console.log(a,b)
+for(var i=1;i<=10;i++){
+    console.log(i*a)
+}
+   }
+   example1(4)
+   example1(10)
+
+   //////////////////////////////////////////
+
+
+   function example(){
+    return 10;
+   }
+   console.log(example())
+   let a = example()
+   console.log(a)
+   console.log(a+300)
+////////////////////////////////
+
+function example2(){
+    return 33;
+}
+console.log(example2())
+let b = example2()
+console.log(b)
+console.log(b+11)
+
+////////////////////////////////
+
+function addarr01(array,n){
+    var sum=0;
+    for (var i=0;i<array.length;i++){
+        sum=sum+array[i]
+    }
+    return sum+n
+}
+let s=addarr01([2,4,6,8],78)
+console.log(s+600+8000)
+
+
+//////////////////////////////
+//English+Math+Science---> 80 90 60
+//100 100 100
+
+//function 1 > addition of marks > return
+
+function score(array){
+    var sum=0;
+    for (var i=0;i<array.length;i++){
+        sum=sum+array[i]
+    }
+    return sum;
+}
+let t=score([80,90,60])
+console.log(t)
+console.log(80+90+60)
+
+
+/////answer
+
+function score(e,m,s){
+console.log(e+m+s)
+return e+m+s
+}
+var total=score(80,90,60)
+console.log(total)
+
+
+//function 2 > calculate % >console||return
+
+//function example3()
+
+function percentage(x){
+    var per=(x/300)*100
+    //console.log(per)
+}
+percentage(total)
+const percent=percentage(total)
+console.log(percent)
+/////////////////////////////////////////////
+
+
+//cube : 2 times 2 times 2
+
+//1.function : square 2 time 2 --4
+
+function square(x){
+return x*x
+}
+var squareans=square(5)
+console.log(squareans)
+
+//2.function calculate the cube of return value of function 1
+
+function cube(y){
+    return y*y*y
+}
+let cubeans=cube(squareans)
+console.log(cubeans)
+
+
+
+    </script>
+</body>
+</html>

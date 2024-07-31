@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .testcommon{
+            color:white;
+            background-color:rgb(224, 106, 175);
+            width: 80px;
+        }
+
+        .test01{
+            padding-top: 80px;
+            padding-right: 60px;
+            padding-bottom: 40px;
+            padding-left:25px;  
+
+            border-top-color:red;
+            border-right-color:green;
+            border-bottom-color:yellow;
+            border-left-color:blue;
+
+            border-width:5px;
+            
+            border-style:dotted;
+        }
+
+        .test02{
+            padding: 20px;
+            border-color: navy;
+            border-style:solid;
+            border-width:5px;
+        }
+
+        .test03{
+            padding: 30px 40px 10px 60px;
+            border-color:rgb(0, 128, 38);
+            border-width: 5px;
+            border-style:dashed;
+        }
+
+        .test04{
+            padding:10px 30px;
+            border-color:red;
+            border-width: 15px 4px 7px;
+            border-style:groove;
+        }
+
+        .test05{
+            padding-top:40px;
+            padding-right:60px;
+            padding-bottom:20px;
+            padding-left:80px;
+
+            border-color: navy;
+
+            border-top-width: 4px;
+            border-right-width:8px;
+            border-bottom-width: 12px;
+            border-left-width: 3px;
+
+            border-top-style: dotted;
+            border-right-style: solid;
+            border-bottom-style: groove;
+            border-left-style: groove;
+        }
+
+        #test06{
+            padding:40px 60px 20px 80px;
+            border-color:red;
+            border-width: 4px 8px 12px 3px;
+            border-style: solid;
+        }
+        #test07{
+            padding:4px 8px;
+            border-width: 4px 8px; 
+            /* opposite */
+            
+            border-top-color: red;
+            border-right-color: navy;
+            border-bottom-color: green;
+            border-left-color: yellow;
+
+            border-style: dotted;
+        }
+    </style>
+</head>
+<body>
+    <p class="test01 testcommon">Hello World</p>
+    <p class="test02 testcommon">Hello World</p>
+    <p class="test03 testcommon">Hello World</p>
+    <p class="test04 testcommon">Hello World</p>
+    <p class="test05 testcommon">Hello World</p>
+    <p id="test06" class="testcommon">Hello World</p>
+    <p id="test07" class="testcommon">Hello World</p>
+</body>
+</html>

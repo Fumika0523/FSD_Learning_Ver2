@@ -1,0 +1,32 @@
+/* external CSS
+style tage (you dont have to use)
+style attaribute (you dont have to use)
+*/
+
+p{
+    color: fuchsia;
+    background-color: rgb(151, 11, 15);
+    font-size: 35px;
+    width: 630px;
+    height: 80px;
+}
+/*How will I connect the files?
+-->> link tag
+-->> above the title tag
+--> external css file*/
+
+/* When to use Internal
+
+When to use inline (small fixes)
+
+when to use external (Big project) */
+
+/* INLINE css has higher weightage || high priority amongst all the CSS */
+
+
+/* PRIORITY :
+inline vs internal vs external > inline
+inline vs external           > inline 
+internal vs external         > internal
+internal vs inline        > inline
+*/

@@ -1,0 +1,36 @@
+<!--Write HTML input tags snippet to show default values for all Form elements.-->
+
+<form>
+<label for="fullname">Full Name</label>
+<input type="text" name="fullname" id="fullname" value="Fumika Mikami">
+<hr>
+<input type="radio" name="gender" id="female" checked><!--checked-->
+<label for="female">Female</label> 
+<input type="radio" name="gender" id="male">
+<label for="male">Male</label> 
+<input type="radio" name="gender" id="other">
+<label for="other">Other</label>
+<hr>
+<label for="email">Email</label>
+<input type="email" name="email" id="email" value="fumika@gmail.com">
+<hr>
+<label for="pass">Password</label>
+<input type="password" name="pass" id="password" value="Password!">
+<hr>
+<label for="country">Select a country</label>
+<select name="country" id="country">
+<option value="UK">UK</option>
+<option value="usa">USA</option>
+<option value="italy">Italy</option>
+<option value="AU" selected>AU</option><!--selected for select tage-->
+</select>
+
+<hr>
+<label for="feedback">Give us a Feedback</label>
+<textarea name="feedback" id="" cols="40" rows="3">The customer service could be better!</textarea>
+<hr>
+
+<input type="submit" value="Submit">
+
+
+</form>

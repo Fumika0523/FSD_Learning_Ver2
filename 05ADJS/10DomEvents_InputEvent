@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Onblur -->
+<p>oninput Event</p>
+<input type="text" name="" id="onInputBox" value="" onblur="testOnInput(event)">
+
+<p>onblur Event</p>
+<input type="text" name="" id="blurInputBox" value="" onblur="testOnBlur(event)">
+
+<p>on change Event</p>
+<select name="" id="mySelect" onchange="testOnChange()">
+<option value="ABC">ABC</option>
+<option value="PQR">PQR</option>
+<option value="SUV">SUV</option>
+</select>
+<!-- To display the selection on change Event -->
+<p id="demo"></p>
+
+<!-- onFocu -->
+<p>onFocus</p>
+<input type="text" name="" id="onFocusBox" onfocus="testOnFocus(event)">
+<script>
+
+//oninput
+function testOnInput(event){
+    console.log(event)
+    console.log("event.target.value",event.target.value)
+    console.log(`My name is ${event.target.value}`)
+    let onInputBoxTest=document.getElementById("onInputBox")
+    console.log("document.getElementById",onInputBoxTest.value)
+}
+//onblur
+function testOnBlur(event){
+    console.log(event)
+    console.log("event.target.value",event.target.value)
+    console.log(`My name is ${event.target.value}`)
+    let blurInputBoxTest=document.getElementById("blurInputBox")
+    console.log("document.getElementById",blurInputBoxTest.value)
+}
+//
+function testOnChange(){
+    console.log(event)
+    console.log("event.target.valu",event.target.value)
+    console.log(`My name is ${event.target.value}`)
+    let mySelectTest=document.getElementById("mySelect")
+    console.log("document.getElementById",mySelectTest.value)
+}
+
+//
+function testOnFocus(){
+    console.log(event)
+    console.log("event.target.value",event.target.value)
+    console.log(`My name is ${event.target.value}`)
+    let onFocusBoxTest=document.getElementById("onFocusBox")
+    console.log("document.getElementById",onFocusBoxTest.value)
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="test()">Click Me</button>
+    <button id="btn1">Click Again</button><hr>
+    <!--  -->
+    <p>MouseUp</p>
+    <input type="text" name="" id="" onmouseup="test1(event)">
+    <p>MouseUpInput</p>    
+    <input type="text" name="" id="input1"><hr>
+    <!--  -->
+    <p>MouseDown</p>
+    <input type="text" name="" id="input4" onmousedown="test2()">
+    <p>MouseDownInput</p>
+    <input type="text" name="" id="input2"><hr>
+    <!--  -->
+    <p>OnFocus</p>
+    <input type="text" name="" id="" onfocus="test3(event)">
+    <p>OnFocusInput</p>
+    <input type="text" name="" id="input3"><hr>
+    <!-- Keyboard Event -->
+    <p>OnKeyPress</p>
+    <input type="text" onkeypress="test4()">
+    <p>onKeyPressInput</p>
+    <input type="text" name="" id="input5"><hr>
+    <!-- KeyUp -->
+    <p>OnKeyUp</p>
+    <input type="text" onkeyup="test5()">
+    <p>onKeyUpInput</p>
+    <input type="text" name="" id="input6"><hr>
+    <!-- KeyDown -->
+    <p>OnKeyDown</p>
+    <input type="text" onkeydown="test6()">
+    <p>OnKeyDownInput</p>
+    <input type="text" name="" id="input7"><hr>
+   
+
+    <script>
+        function test(){
+            console.log("Click Me")
+        }
+// Target the Element and we are attaching the event listener
+//We dont write on infront of event,events are written in quotes
+//Syntax:
+//let test1=document.getElemenyById('idname')
+//test1.addEventListener('eventname',()=>{...//block of code})
+
+    let btn1Test=document.getElementById("btn1")
+        btn1Test.addEventListener('click',()=>{
+            console.log("Btn is clicked again")
+        })
+
+    //mouseUp 
+    function test1(event){
+        console.log("MouseUp")
+    }
+
+    let input1Test=document.getElementById("input1")
+    input1Test.addEventListener('mouseup',()=>{
+        console.log("MouseUpInputAgain")
+    })
+
+    //mousedown 
+    function test2(event){
+        console.log("MouseDown")
+    }
+
+    let input2Test=document.getElementById("input2")
+    input2Test.addEventListener('mousedown',()=>{
+        console.log("MouseDownInputAgain")
+    })
+
+    //onFocus
+    function test3(event){
+        console.log("onFocus")
+    }
+
+    let input3Test=document.getElementById("input3")
+    input3Test.addEventListener('focus',()=>{
+        console.log("onFocusInputAgain")
+    })
+
+    //onKeyPress
+    function test4(){
+        console.log("onKeyPress")
+    }
+
+    let input5Test=document.getElementById("input5")
+    input5Test.addEventListener('keypress',()=>{
+        console.log("OnKeyPressAgain")
+    })
+    //onkeyUp
+    function test5(){
+        console.log("onKeyUp")
+    }
+
+    let input6Test=document.getElementById("input6")
+    input6Test.addEventListener('keyup',()=>{
+        console.log("OnKeyUpAgain")
+    })
+    //keyDown
+    function test6(){
+        console.log("OnKeyDown")
+    }
+
+    let input7Test=document.getElementById("input7")
+    input7Test.addEventListener('keydown',()=>{
+        console.log("OnKeyDownAgain")
+    })
+
+
+    </script>
+</body>
+</html>

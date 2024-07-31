@@ -1,0 +1,55 @@
+.heading-commmon{
+    background-color: orange;
+    color:white;
+    font-size: 35px;
+    display: inline-block;
+    width: 1250px;
+}
+.travelgo{
+    padding: 0px 100px 0px 0px;
+}
+.thcommon{
+    padding:0px 25px;
+    color: white;
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.body{
+    background-color:rgb(19, 177, 185);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.countryname{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.place-to-visit-common{
+    font-size: 25px;
+    color:rgb(248, 248, 38);
+}
+
+.click-common{
+  font-size: 20px;
+  color: rgb(5, 52, 146);
+  display: block;
+  background-color: lightblue;
+  width: 160px;
+}
+
+p{
+    color:white;
+}
+
+.country-list{
+    color:white;
+}
+
+.bullet-point{
+    color:white;
+    font-size: 18px;
+}

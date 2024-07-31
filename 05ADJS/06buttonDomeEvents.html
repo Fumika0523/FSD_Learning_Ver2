@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="onclickDemo" onclick="sum(event)" >Click My ID</button>
+    <p id="onclickDemo1"></p>
+
+    <button onclick="test()">Click Again</button>
+    <p id="onclickDemo2"></p>
+
+    <button onclick="add()">Click Again2</button>
+    <p id="onclickDemo3"></p>
+
+    <button onclick="push()">Click push </button>
+    <p id="onclickDemo4"></p>
+
+    <button onclick="forLoop()">Click forLoop</button>
+    <p id="onclickDemo5"></p>
+
+    <label for="">oninput</label>
+    <input type="text" name="" id="" value="" oninput="display(event)">
+    <p id="onclickDemo6"></p>
+
+    <label for="">onchange</label>
+    <input type="text" value="" id="demo10" onchange="test10()">
+    <p id="demo11"></p>
+
+    <label for="">oninput</label>
+    <input type="text" name="" id="" value="" oninput="display1(event)">
+    <p id="onclickDemo7"></p>
+
+    <label for=""></label>
+    <input type="text" name="" id="" value="" onblur="test1(event)">
+    <p id="onclickDemo8"></p>
+
+    <input type="text" name="" id="" value="" onblur="test2()">
+    <p id="onclickDemo9"></p>
+
+    <button ondblclick="cbrtNum(64)">cbrtButton</button>
+    <p id="onclickDemo10"></p>
+    
+    <button onclick="push1()">Push Button</button>
+    <p id="onclickDemo11"></p>
+
+    <button onclick="pop()">Pop Button</button>
+    <p id="onclickDemo12"></p>
+
+    <button onclick="shift()">Shift Button</button>
+    <p id="onclickDemo13"></p>
+
+    <button onclick="unshift()">Unshift Button</button>
+    <p id="onclickDemo14"></p>
+    <script>
+    
+    function sum(event){
+        console.log(2+2)
+        console.log(event)
+        let a=2+2
+        console.log(a)
+        let ptag=document.getElementById("onclickDemo1")
+        ptag.innerHTML=`${a}`
+    }
+   
+    function test(){
+        console.log("Test Function Working")
+        let b="Test Function Working"
+        console.log(b)
+        let ptag=document.getElementById("onclickDemo2")
+        ptag.innerHTML=`${b}`
+    }
+
+    function add(){
+        console.log(5+5)
+        let c=(5+5)
+        console.log(c)
+        let ptag=document.getElementById("onclickDemo3")
+        ptag.innerHTML=`${c}`
+    }
+
+    function push(){
+        console.log(10+10)
+        let d=(10+10)
+        console.log(d)
+        let ptag=document.getElementById("onclickDemo4")
+        ptag.innerHTML=`${d}`
+    }
+
+    function forLoop(){
+        for (var i=0;i<=10;i++)
+        console.log(i)
+        let ptag=document.getElementById("onclickDemo5")
+        ptag.innerHTML=`${i}`
+    }
+    
+    function display(event){
+        console.log(event)
+        console.log(event.target.value)
+        console.log(`My name is ${event.target.value}`)
+        let ptag=document.getElementById("onclickDemo6")
+        ptag.innerHTML=`My name is ${event.target.value}`
+    }
+
+    function test10(){
+        console.log("Function called")
+        let inputtag=document.getElementById("demo10").value
+        console.log(inputtag)
+        let ptag=document.getElementById("demo11")
+        ptag.innerHTML=`My name is ${inputtag}`
+    }
+
+    function display1(){
+        console.log(event.target.value)
+        console.log(`My username is ${event.target.value}`)
+        let ptag=document.getElementById("onclickDemo7")
+        ptag.innerHTML=`My username is ${event.target.value}`
+    }
+
+    function test1(){
+        console.log(event)//when you click outside the box is shows
+        console.log(event.target.value)
+        let ptag=document.getElementById("onclickDemo8")
+        ptag.innerHTML=`My name is ${event.target.value}`
+    }
+
+    function test2(){
+        let ptag=document.getElementById("onclickDemo9")
+        ptag.innerHTML=`My name is ${event.target.value}`
+    }
+
+    function cbrtNum(x){
+        console.log(Math.cbrt(x))
+        let ptag=document.getElementById("onclickDemo10")
+        ptag.innerHTML=`Cube root of number ${x} is ${Math.cbrt(x)}`
+    }
+
+    // create the function using 4 method
+    //push(),pop(),shift(),unshift()
+
+    function push1(){
+        console.log(colours)
+        colours.push("green")
+        let ptag=document.getElementById("onclickDemo12")
+        colours.push("purple")
+        ptag.innerHTML=`My favourite colour is ${colours}`
+    }
+    const colours=["yello","red","blue"]
+
+    ////
+    function pop(){
+        console.log(country)
+        country.pop()
+        let ptag=document.getElementById("onclickDemo12")
+        ptag.innerHTML=`I've been to ${country}`
+    }
+    let country=["Italy","Spain","Australia","Canada","UK","India","USA"]
+    ////
+    function shift(){
+        console.log(animal)
+        animal.shift()
+        console.log(animal)
+        let ptag=document.getElementById("onclickDemo13")
+        ptag.innerHTML=`I like ${animal}`
+    }
+    let animal=["cat","dog","elephant","tiger","lion","chicken","pig"] 
+
+    //
+    function unshift(){
+        console.log(brand)
+        brand.unshift("Coach")
+        console.log(brand)
+        let ptag=document.getElementById("onclickDemo14")
+        ptag.innerHTML=`My favourite brands are ${brand}`
+    }
+    let brand=["Gucci","Dior","Fendi","Chanel"]
+
+    ////
+    //onfocus,
+
+     //pointer event: mouse eventt >1. onclick, 2.ondblclick, 3. mouseup, 4. mousedown
+    //3. mouseup, 4. mousedown > Check by yourself with example
+
+
+    </script>
+</body>
+</html>

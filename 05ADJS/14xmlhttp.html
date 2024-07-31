@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- API -->
+    <!-- Create an XHR Object object > new keyword -->
+    <!-- XMLHTTP Request -->
+    <!-- Traditional method -->
+    <script>
+        //create an XHR object
+        var req=new XMLHttpRequest()
+       // https://jsonplaceholder.typicode.com/todos
+        //console.log(req)
+        //Steps > Open the connection || GET, url
+        //req.open(`GET`,`https://jsonplaceholder.typicode.com/todos`)
+        // //      >Sending the connection || initiate the bridge
+        req.send()
+        // //      >wait for the server response > onload()
+        //onload events
+        //window events > annonymous function
+        req.onload=function(){
+             console.log("waiting for server response...")
+            console.log(req.response)
+        //     console.log(typeof(req.response))//string
+        //we cant use the string > we have to pass the data , convert from string to object
+         let data=JSON.parse(req.response) //Json is the representing Object,
+        console.log(data[0].title)
+        // //forloop
+         for (var i=0;i<data.length;i++){
+        console.log(data[i].title)
+        console.log(`My UserId is ${data[i].userId}, Task given to me is ${data[i].title} and My task status is ${data[i].completed}`)
+        }
+        // console.log(data)
+        // data.map((element,index)=>console.log(`My userID is ${element.userID} task given to me was ${element.title} and status of task is ${element.completed}`))
+               }
+
+        //
+    </script>
+</body>
+</html>

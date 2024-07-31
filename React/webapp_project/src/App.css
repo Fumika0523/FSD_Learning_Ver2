@@ -1,0 +1,47 @@
+.design{
+    background-color: yellow;
+    height: 100px;
+    width: 200px;
+    margin-bottom: 1%;
+}
+.test1{
+    background-color: navy;
+}
+.test2{
+    background-color: pink;
+}
+.test3{
+    background-color: red;
+}
+.test4{
+    background-color: orange;
+}
+.test5{
+    background-color: green;
+}
+.test6{
+    background-color: purple;
+}
+.test7{
+    background-color: yellow;
+}
+.test8{
+    background-color: darkgrey;
+}
+.nameDesign{
+    font-size: 20px;
+    font-weight: bold;
+}
+.ageDesign{
+    font-size: 18px;
+
+}
+.contentDesign{
+    border-top: 1px solid black;
+    background-color:rgb(5, 5, 107);
+    color: white;
+    padding-bottom: 12px;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 10px;
+}

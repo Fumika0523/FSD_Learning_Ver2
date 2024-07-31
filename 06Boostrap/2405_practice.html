@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [80,25,60,34,45,33]
+        //find 60
+        //1 index to 4 index, not 25 to 45
+       //array method
+       //slice & includes method
+       let ans=arr.slice(1,5).includes(60)
+       console.log(ans)
+
+       //if its true == found
+       //if its not true == not found
+
+        if (ans==true){
+            console.log("found")
+        }else{
+            console.log("not found")
+        }
+
+        //find a maximum number? > 80
+        
+        console.log(Math.max(80,25,60,34,45,33))
+        console.log(...arr)//spread 
+        console.log(Math.max(...arr))
+
+        let str="Poonam"
+        //find out if there is o or not
+        //if exist > Exist
+        //not Exist
+
+        console.log(str.includes("o"))
+        let ans1=str.includes("o")
+        if (ans1==true){
+            console.log("Exist")
+        }else{
+            console.log("Not Exist")
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+React was introduced in 2013 by Jordan Walke, a software engineer at Facebook.
+
+We love: faster internet mobile internet, durable battery.
+
+Most popular social platforms:Facebook, Youtube, FB Messanger, Istagram, LinkedIn, TikTok,Twitter,Snapchat
+
+2009-2019, the rise of mobile traffic was rapidly rised, but 2020 dropped due to Covid
+
+Cost of mobile internet around the World:
+- India is the lowest 0.26 dollar
+-Switzerland:20 dollar
+
+Web Application: You can write a message, store the pw data.
+
+Website: you can read / watch only.
+
+Understanding by Browser @ HTML , CSS, JS
+
+but React JS cannot understand the 3 languages
+
+Webpack,Babel are the translator/complier
+
+SPA:Single Page Application.
+Only required data is loaded, good performance.
+Data Saving.
+
+Sequential Experience(Web): Loading time is huge
+
+Fluid Experience(Mobile): Loading time is low
+
+----------------
+Project
+https://vitejs.dev/guide/
+
+1. Open the folder in VS code
+2. Terminal > New Terminal
+* check if there is any changes on the official website.
+npm create vite@latest
+* cd .. >>go back to previous path
+* ctrl + C + Enter >> Kill the server and it will show just original path.
+*cd . + beginning of the project name + Enter, it will automatically show you the path 
+
+3.Create a project name
+4.Framework > React (Select from a updown arrow key)
+5.Variant > Javascript (Select from a updown arrow key)
+
+cd "project folder name"
+npm install
+npm run dev  > it will give you a local host url http://localhost:5173/
+
+.eslintrc.cjs > another configuration
+.gitignore > github the file cannot be pushed to gitHub
+
+index.html > entry point of the project
+package.json > list of dependencies mention for running the project
+package-lock.json > list of inter-dependencies mention for running the project
+README.md > update the documentation of the project
+vite.config.js >configuration required to use viting
+
+App.jsx > Main design page, based on this page, the browser display the content, render to the browser
+App.jsx is imported to main.jsx
+main.jsx is imported to index.html
+
+Only specific folder should be opened on VS code.
+App.css is the style page for App.jsx
+index.css is the style page for index.html
+src stands for source folder > All the code will be return over here.
+src > assets, the all images are stored and we can use it in the project.
+
+In Components, you can design with class,object,inline-style.
+It has to be used 1 between object / inline-style. combination of class & object , class & inline-style are ok.
+
+ {} > because writing a js, {{}} > for the object
+ JS inside the HTML
+
+style={{backgroundColor:"blue",height:"100px",width:"100px",marginBottom:"1%"}} >>>> inline-style
+ const myDesign={
+        backgroundColor:"grey",
+    }
+style={myStyle} >>>> Object style
+
+Components Reusibility:
+before function, state "import xx from './xxx' "
+within return <> </>, you can reuse the component.
+EX:
+import Message from './Message'
+function Welcome(){
+    return(
+        <>
+        <div style={{backgroundColor:"blue",height:"100px",width:"100px",marginBottom:"1%"}}>Hello World</div>
+        <Message/>
+        <Message/>
+        </>
+    )
+}
+export default Welcome
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child{
+            background-color: blue;
+            height: 100px;
+            width: 15%;
+            margin: 1%;
+            text-align: center;
+            font-size: 45px;
+            color: black;
+            /* work wih child */
+            align-content: center
+            /* align-content: flex-end; */
+        }
+
+        .parent{
+            /* align itself row wise */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            border: 1px solid black;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child child1">1</div>
+        <div class="child child2">2</div>
+        <div class="child child3">3</div>
+        <div class="child child1">4</div>
+    </div>
+</body>
+</html>

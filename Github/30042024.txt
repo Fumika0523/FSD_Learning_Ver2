@@ -1,0 +1,29 @@
+How to open the website from File explore
+-> Go to your folder > delete the folder path and write "cmd" > enter
+->Command prompt will automatically open > type " code ." hit enter
+-> the web site will be opened
+
+GitHub
+-> click "Fumika0523" > Repositories > click "New"
+-->Repository name --> public -> create repository
+--> click "uploading and existing file"
+--> Drag and Drop the folder/file--> Commit Changes
+-->go to Settings --> Pages --> Branch : main -> Save
+-->go to Action -> check "pages build and deployment"
+--> URL will be created
+--> back to "Code" -> right side "About" > Settings
+-->write a description in short (ex: HTML CSS _ Flex Layout)
+--> paste the URL to "Website" -> Save
+
+Github (after editted)
+--> After you edited on VS code -> click "Sourse Control" > "publish to GitHub"
+--> select "publish GitHub public repository" --> Put the summary note on left message box, and click blue button.
+
+GitHub(Delete)
+-->Select the target repository in GitHub -> click Settings --> Click "Delete this repository"
+--> follow the instruction
+
+Netlify
+-> Go to Netlify webpage -> click "Add new site" > "import .."
+--> "Deploy with GitHub" -> Follow instruction
+ 

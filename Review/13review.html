@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let arr=[4,5,6,10,99,100,78,56,89,56,34]
+console.log(arr.length)
+console.log(Math.floor(Math.random()*arr.length))
+var indexNum=(Math.floor(Math.random()*arr.length))
+console.log(arr[indexNum])
+//index is the position starting from 0
+//length is the count starting from 1
+
+//(Math.random()*arr.length) > it gives you the random number based on length of array (including decimal values, excluding the length > 11)
+//Math.floor(Math.random()*arr.length) > random value is converting to the integer value , exclude 11, arrr[11] doesnt exist
+//Why storing as indexNum > We are assuming the value as index number, because if we pass in array, with respect to the indexNum, it will give the arr element.
+
+//What is index: index is the position of array starting from 0
+//What is element: the value of the array.  
+//What is length:length of array the count starting from 1
+//What is an array: represent inside the [], it contain the hetergenous datatypes.
+//composite datatypes. variablename[0] => 1. using the index of number, we access the arr element. by using length property,we can get the length of arr.
+
+var arr1=[90,true,"hello",90,78,56,45,67,34,"fumika","poonam"]
+let indexNum1=Math.floor(Math.random()*arr1.length)
+let getValue=arr1[indexNum1]//get something 4 ||5 || 100||fumika
+let newarr=[];
+newarr.push(getValue)
+newarr[indexNum] = (getValue)
+console.log(newarr)
+
+
+
+
+
+        </script>
+</body>
+</html>

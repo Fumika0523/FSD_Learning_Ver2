@@ -1,0 +1,48 @@
+.title{
+    font-size: 49px;
+    /* border: 1px solid grey; */
+    margin:2.5%
+}
+
+.btn{
+    font-size: 20px;
+    padding:1.7% 3%;
+    color: white;
+    font-weight: bold;
+    margin-top: 3%;
+}
+
+.btn1{
+    background-color: rgb(208, 78, 27);
+    margin-right: 23%;
+}
+
+.btn2{
+    background-color: rgb(102, 159, 102);
+}
+.icon{
+    font-size: 30px;
+    margin: 0;
+    /* border: 1px solid black;
+    border-radius: 25px; */
+}
+.thumbup{
+    padding-right: 6px;
+    color:rgba(9, 109, 9, 0.934);
+    border-right: 1px solid black;
+}
+.thumbdown{
+    color:rgb(33, 33, 135);
+    margin-left: 3%;
+}
+.contentDesign{
+    /* border: 1px solid red; */
+    margin-bottom: 3%;
+}
+.nickName{
+    font-size: 27px;
+    text-align: center;
+}
+.message{
+    text-align: center;
+}

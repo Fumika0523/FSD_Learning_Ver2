@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .child{
+        background-color:blueviolet;
+        height:50px;
+        width:50px;
+        margin:1%;
+        text-align: center;
+        font-size: 45px;
+        color: black;
+    }
+
+    .parent{
+        /* align itself row wise */
+        display:flex;
+        width:25%;
+        border: 1px solid black;
+    }
+    .rowDirectionParent{
+        flex-direction:row;
+        flex-wrap: wrap;
+    }
+    .rowReverseDirectionParent{
+        flex-direction:row-reverse;
+        /* flex-wrap:wrap; */
+        flex-wrap:wrap-reverse;
+    }
+
+    .colDirectionParent{
+        flex-direction:column;
+           /* flex-wrap:wrap; */
+        flex-wrap:wrap-reverse;
+        height: 300px;
+    }
+
+    .colreverseDirectionParent{
+        flex-direction: column-reverse;
+        height: 300px;
+        /* flex-wrap:wrap; */
+        flex-wrap:wrap-reverse;
+    }
+    </style>
+</head>
+<body>
+    <div class="parent rowDirectionParent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
+        <div class="child">10</div>
+        <div class="child">11</div>
+        <div class="child">12</div>
+        <div class="child">13</div>
+        <div class="child">14</div>
+        <div class="child">15</div>
+        <div class="child">16</div>
+        <div class="child">17</div>
+        <div class="child">18</div>
+        <div class="child">19</div>
+        <div class="child">20</div>
+        <div class="child">21</div>
+        <div class="child">22</div>
+        <div class="child">23</div>
+        <div class="child">24</div>
+        <div class="child">25</div>
+    </div>
+    <hr> 
+    <div class="parent rowReverseDirectionParent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
+        <div class="child">10</div>
+        <div class="child">11</div>
+        <div class="child">12</div>
+        <div class="child">13</div>
+        <div class="child">14</div>
+        <div class="child">15</div>
+        <div class="child">16</div>
+        <div class="child">17</div>
+        <div class="child">18</div>
+        <div class="child">19</div>
+        <div class="child">20</div>
+        <div class="child">21</div>
+        <div class="child">22</div>
+        <div class="child">23</div>
+        <div class="child">24</div>
+        <div class="child">25</div>
+    </div>
+    <hr> 
+    <div class="parent colDirectionParent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
+        <div class="child">10</div>
+        <div class="child">11</div>
+        <div class="child">12</div>
+        <div class="child">13</div>
+        <div class="child">14</div>
+        <div class="child">15</div>
+        <div class="child">16</div>
+        <div class="child">17</div>
+        <div class="child">18</div>
+        <div class="child">19</div>
+        <div class="child">20</div>
+        <div class="child">21</div>
+        <div class="child">22</div>
+        <div class="child">23</div>
+        <div class="child">24</div>
+        <div class="child">25</div>
+    </div>
+    <hr> 
+    <div class="parent colreverseDirectionParent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
+        <div class="child">10</div>
+        <div class="child">11</div>
+        <div class="child">12</div>
+        <div class="child">13</div>
+        <div class="child">14</div>
+        <div class="child">15</div>
+        <div class="child">16</div>
+        <div class="child">17</div>
+        <div class="child">18</div>
+        <div class="child">19</div>
+        <div class="child">20</div>
+        <div class="child">21</div>
+        <div class="child">22</div>
+        <div class="child">23</div>
+        <div class="child">24</div>
+        <div class="child">25</div>
+    </div>
+    <hr> 
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--input elements-->
+<!--user/client-->
+
+<input type = "text" name="" id="" value="Fumika" placeholder="UserName">
+
+<!--//type-->
+<!--//value predefined info/prefilled info-->
+<!--placeholder acts like a label to you > what info needed to be feeded -->
+<br><br/>
+<input type="text" name="" id="" value="" placeholder="">
+<input type="email" name="" id="" placeholder="Enter email">
+<input type="text" name="" id="" placeholder="Name" >
+
+<input type="button" name="" id="" value="Submit"><!--value is mandatory not placeholder-->
+<br><br/>
+<input type="checkbox" name="" id="" placeholder="">
+
+<input type="color" name="" id="" placeholder="">
+
+<input type="date" name="" id="" placeholder="">
+
+<input type="datetime-local" name="" id="" placeholder="">
+<br><br/>
+<input type="email" name="" id="" placeholder="Email">
+
+<input type="file" name="" id="" placeholder="">
+
+<input type="hidden" name="" placeholder=""><!--you  cant see on your browser,  only space-->
+
+<input type="month" name="" id="" placeholder="">
+<br><br/>
+
+<input type="number" name="" id="" placeholder="Choose Number">
+
+<input type="password" name="" id=""placeholder="Password">
+
+<input type="radio" name="" id="" >
+
+<input type="range" name="" id="">
+<br><br/>
+<input type="reset" value="reset">
+
+<label for="search"></label>
+<input type="search" name="" id="search" placeholder="Search Box">
+
+<input type="submit" value="submit">
+
+<input type="tel" name="" id="" placeholder="mobile no.">
+<br><br/>
+
+<input type="url" name="" id="" placeholder="URL">
+
+<input type="time" name="" id="">
+
+<input type="week" name="" id="">
+
+<label>Search Box</label>
+<br><br>
+<hr>
+<!--bind => label + input
+for attribute > label tag
+id attribute > label tag
+id attribute > input tag
+both attribute will be same > binding will happen
+-->
+
+<label for="fullname">FullName:</label>
+<input type="text" name="" id="fullname" value="" placeholder="">
+
+<label for="email">Email</label>
+<input type="email" name="" id="email">
+
+<label for="pass">Password</label>
+<input type="password" name="" id="pass"><br><br>
+
+<input type="submit" value="Submit">
+
+<!--input > button => submit, reset => we dont need label and binding because value attribute is mandatory no need of placeholder/label tag-->
+<!--it should b unique label + id to bind up-->
+
+<hr/>
+
+<!--out of these 3 only 1 should be selected group them
+name attribute > group > give same name attribute value
+ex: gender category
+radion > only for 1 selection
+check box > multiple selection
+-->
+
+<input type="radio" name="gender" id="female">
+<label for="female">Female</label> 
+
+<input type="radio" name="gender" id="male">
+<label for="male">Male</label> 
+
+<input type="radio" name="gender" id="other">
+<label for="other">Others</label> 
+
+<!--Age > minor major senior-->
+<hr/>
+<input type="radio" name="age" id="minor">
+<label for="minor">Age 0-25</label> 
+
+<input type="radio" name="age" id="major">
+<label for="major">Age 26-40</label> 
+
+<input type="radio" name="age" id="senior">
+<label for="senior">Age 41-60</label> 
+
+<hr>
+<label for="car">Car</label>
+<input type="checkbox" name="vehicle" id="car">
+
+<label for="motorbike">Motor Bike</label>
+<input type="checkbox" name="vehicle1" id="motorbike">
+
+<label for="lorry">Lorry</label>
+<input type="checkbox" name="vehicle2" id="lorry">
+
+<label for="cycle">Cycle</label>
+<input type="checkbox" name="vehicle3" id="cycle">
+
+<!--We select from below options > blind => label-->
+<hr>
+<label for="cars">Choose a Car</label>
+<select id="cars">
+    <option value =""></option>
+    <option value ="volvo">Volvo</option>
+    <option value ="bmw">BMW</option>
+    <option value ="audi">Audi</option>
+</select>
+
+<hr>
+
+<label for="countries">Choose a Country</label>
+<select id="countries">
+    <option value ="usa">USA</option>
+    <option value ="uk">UK</option>
+    <option value ="india">India</option>
+    <option value ="japan">Japan</option>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let divTest1=document.createElement("div")
+        divTest1.setAttribute("class","heading")
+        document.body.append(divTest1)
+        divTest1.style.border="3px solid black";
+        divTest1.style.width="500px";
+        divTest1.style.height="300px";
+        divTest1.style.backgroundImage="url(./04ADJS/AboutBGimages.jpeg)";
+
+    </script>
+</body>
+</html>

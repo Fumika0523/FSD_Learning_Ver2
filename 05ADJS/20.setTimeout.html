@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="stop()">Stop This</button>
+   <script>
+    console.log(1)
+    console.log(2)
+    console.log(3)
+    console.log(4)
+    //console.log("Hi")//want to print after 5 second
+    //setTimeout(()={},timer(delay in milliseconds))
+    let test=setTimeout(()=>{console.log("Hi")},5000)//not blocking the code
+    // console.log(1)
+    // console.log(2)
+    // console.log(3)
+    // console.log(4)
+    // setTimeout(()=>{console.log("Hi")},6000)
+    // console.log(1)
+    // console.log(2)
+    // console.log(3)
+    // console.log(4)
+    // for (var i=1;i<=100;i++){
+    //     console.log(i)
+    // }
+    function stop(){
+        console.log("stopped")
+        clearTimeout(test)//pressure is gone
+    }
+   </script> 
+</body>
+</html>

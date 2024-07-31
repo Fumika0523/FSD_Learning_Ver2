@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Promise status: Pending, Fullfilled(Resolve), Rejected >>> Response  -> .then()
+        Whenever we get response, we cant get it directly
+        If there is a error -> .catch() -> 
+     -->
+     <script>
+             let p=new Promise(()=>{})
+             console.log(p)
+
+             let p1=new Promise((resolve,reject)=>{
+                resolve(`Yes`)
+             })
+             console.log(p1)
+             p1.then((value)=>console.log(value))
+
+             let p2=new Promise((resolve,reject)=>{
+                reject(`No`)
+             })
+             console.log(p2)
+             p2.catch((error)=>console.log(error))
+
+             ///////////////////
+             let p3=new Promise((resolve,reject)=>{
+                resolve(`I visited the restaurant`)
+             })
+             console.log(p3)
+
+             let p4=new Promise((resolve,reject)=>{
+                reject(`My friend didn't come`)
+             })
+             console.log(p4)
+             p4.catch((error)=>console.log(error))
+             ///////////////
+
+             let p5=new Promise((resolve,reject)=>{
+                resolve("Welcome")
+                reject("note Welcome")//ignored
+             })
+             console.log(p5)
+             p5.then((value)=>console.log(value)).catch((error)=>console.log(error))
+
+             let p6=new Promise((resolve,reject)=>{
+                reject("dont come")
+                resolve("come")//ignored
+             })
+             console.log(p6)
+             p6.catch((error)=>console.log(error))
+
+             //if condition >>>> condition
+             //let time = "3:00"
+             let time="2:30"
+             //let time="4:00"
+             let p10=new Promise((resolve,reject)=>{
+                if(time=="3:00"){
+                    resolve("I will come")//fulfilled
+                }
+                else if(time=="2:30"){
+                    resolve("On the way")//fulfilled
+                }
+                else{
+                    reject("I wont come")
+                }
+             })
+             console.log(p10)
+
+             // vote > age 18 > vote
+                    // < cant vote
+                    // you take it
+
+            //values> state of the promise
+            //.then()
+            //function as a parameter >> ()=()
+            //(value=>console.log(value)
+     </script>
+
+</body>
+</html>

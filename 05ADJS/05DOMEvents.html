@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!-- Click event > Pointer event 
+oninput > input event
+onblur
+onfocus-->
+<select name="" id="mySelect" onchange="test()">
+<option value="ABC">ABC</option>
+<option value="PQR">PQR</option>
+<option value="SUV">SUV</option>
+</select>
+<p id="demo"></p>
+
+<input type="text" value="" id="demo2" onchange="test1()">
+<p id="demo3"></p>
+
+
+<script>
+    function test(){
+        console.log("Function called")
+        let a=document.getElementById("mySelect").value
+        console.log(a)
+        let ptag=document.getElementById("demo")
+        ptag.innerHTML=`The selection is ${a}`
+        }
+    //////////////////
+    function test1(){
+        console.log("Function2 called")
+        let inputtag=document.getElementById("demo2").value
+        console.log(inputtag)
+        console.log(`My name is ${inputtag}`)
+        let ptag=document.getElementById("demo3")
+        ptag.innerHTML=`My name is ${inputtag}`
+    }
+    /////
+    
+  
+</script>
+</body>
+</html>

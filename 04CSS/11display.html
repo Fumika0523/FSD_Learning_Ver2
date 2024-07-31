@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: yellow;
+            width: 100px;
+            display:inline;
+        }
+        span{
+            background-color: pink;
+            width:150px;
+            display:block;
+        }
+        .test01{
+            display:block;
+            width:200px;
+            background-color:blueviolet;
+            color:white;
+        }
+        .test02{
+            display:inline-block;
+            width:200px;
+            background-color:purple;
+             /* you want block property and its should be a inline */
+            color:white;
+        }
+        p{
+            /* you want block property and its should be a inline */
+            background-color:chocolate;
+            display:inline-block;
+            width:500px;
+        }
+    </style>
+</head>
+<body>
+    <!--block element > width applicable-->
+    <div>World</div>
+    <!--inline element > width not applicable-->
+    <span>Hello</span>
+    <a href="" class="test01">Hello</a>
+    <a href="" class="test01">Hello</a>
+    <hr>
+    <a href="" class="test02">Lorem ipsum dolor sit amet.</a>
+    <a href="" class="test02">Lorem ipsum dolor sit amet.</a>
+    <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+    
+</body>
+</html>

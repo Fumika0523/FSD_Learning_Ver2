@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            background-color: peru;
+            width: max-content;
+            display: grid;
+            /* mentioned how many cols and width */
+            grid-template-columns: auto auto auto;
+            /* mentioned how many row and height */
+            grid-template-rows: auto auto;
+            /* gaps */
+            /* grid-row-gap: 10px; */
+            /* grid-column-gap: 20px; */
+            /* row col */
+            /* grid-gap:50px 10px: */
+            /* px are equals */
+            grid-gap: 40px;
+        }
+        .child{
+            border:4px solid red;
+            background-color:brown;
+            height: 160px;
+            width: 160px;
+            margin-bottom: 1%;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>

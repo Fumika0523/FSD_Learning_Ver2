@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function test(){
+            let res=await fetch(`https://jsonplaceholder.typicode.com/todos`)
+            let data=await res.json()
+            console.log(data)
+            data.map((element,index)=>{
+            console.log(`${element.title}`)
+            let divTag=document.createElement(`div`)
+            divTag.innerHTML=element.title
+            document.body.append(divTag)
+            divTag.style.color="white"
+            divTag.style.backgroundColor="purple"
+            divTag.style.textAlign="center"
+            divTag.style.marginBottom="1px"
+            divTag.style.heright="60px"
+            divTag.style.width="300px"
+            divTag.style.alignContent="center"
+            divTag.style.fontSize="20px"
+            divTag.style.marginLeft="40%"
+            })    
+        }
+        test()
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let req=fetch(`https://jsonplaceholder.typicode.com/todos`)
+        req.then((value)=>value.json())
+        .then((res)=>{
+            console.log(res)
+        for(var i=0;i<=res.length;i++){
+        console.log(res[i]?.title)
+        // let h6Tag=document.createElement(`h6`)
+        // h6Tag.innerHTML=res[i]?.title
+        // document.body.append(h6Tag)
+        let divTag=document.createElement(`div`)
+        divTag.innerHTML=res[i]?.title
+        document.body.append(divTag)
+        divTag.style.color="white"
+        divTag.style.backgroundColor="purple"
+        divTag.style.textAlign="center"
+        divTag.style.marginBottom="1px"
+        divTag.style.height="60px"
+        divTag.style.width="300px"
+        divTag.style.alignContent="center"
+        divTag.style.fontSize="20px"
+        divTag.style.marginLeft="40%"
+        }
+        })
+    </script>
+</body>
+</html>
