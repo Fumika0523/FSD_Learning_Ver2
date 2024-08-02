@@ -2,7 +2,7 @@ import './App.css'
 import Design1 from './Components/Design1'
 import { useState } from 'react'
 import Design2 from './Components/Design2'
-import Design1_vr2 from './Components/Design1_vr2'
+
 
 function App() {
 

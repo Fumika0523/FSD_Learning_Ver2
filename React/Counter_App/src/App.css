@@ -19,7 +19,11 @@
     justify-content: center;
     margin-top: 4%;
     border: 1px solid black;
-    width: 30%;
+    width: 45%;
+    margin-left: 27%;
+    height:230px ;
+    align-items: center;
+    background-color: lightyellow;
 }
 .design1{
     display:flex;
