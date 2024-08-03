@@ -218,6 +218,26 @@ app.get('/contact',(req,res)=>{
     res.send("CONTACT US PAGE")
 })
 
+// Product
+// ?search=games&rating=5
+// if anyone is not passing string, >> kindly check the search bar ,error message
+// you need to show what they are searching, and what is the rating
+
+app.get('/product',(req,res)=>{
+  if(!req.query.search){
+    res.send({
+      "message":"Kindly Check the search bar" 
+      //object key starting with a lower-case
+    })
+  }else{
+    res.send(
+      {"search":req.query.search,"rating":req.query.rating || 5} 
+      // default rating value as 5
+      //
+    )
+  }
+})
+
 const PORT=8002
 app.listen(PORT,()=>{
     console.log("Server Started at PORT NO",PORT)

@@ -24,6 +24,7 @@ app.get('/weather',(req,res)=>{
     console.log(req.query.country)
     if(!req.query.country){ //! << NOT OPERATOR, to show you the error message
         res.send({
+            // Error Message should be alwasys like this
             "code":401,
             "message":"Invalid Query Params, Please refer and enter the correct params",
             "error":"No address FOund? Pass and address"
