@@ -4,3 +4,6 @@ npm i nodemon
 
 update in scripts "start":"node index.js"     >> npm run start
 "dev":"nodemon index.js"    >> npm run dev
+
+
+Each folder should
