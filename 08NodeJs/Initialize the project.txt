@@ -6,4 +6,5 @@ update in scripts "start":"node index.js"     >> npm run start
 "dev":"nodemon index.js"    >> npm run dev
 
 
-Each folder should
+Each folder should have .gitignore file.
+you should put file name >>> node_modules
