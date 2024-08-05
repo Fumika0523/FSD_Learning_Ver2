@@ -17,7 +17,7 @@ const User=mongoose.model("User",{
     registered:{type:Boolean,default:false,required:true},
     gender:{type:String,required:true,default:"unknown"}
 })
-// until Line19, creating Collection u
+// until Line19, creating Collection
 
 const userData= new User ({
     name:"Fumika00",
