@@ -146,7 +146,7 @@ app.put('/task/:id',async(req,res)=>{
 
 //Movie
 app.put('/movie/:id',async(req,res)=>{
-    const updateMovie = await Movie.findByIdAndUpdate(req.params.id,req.body.{new:true,runValidators:true})
+    const updateMovie = await Movie.findByIdAndUpdate(req.params.id,req.body,{new:true,runValidators:true})
     res.send(updateMovie)
 })
 
