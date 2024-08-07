@@ -124,7 +124,7 @@ app.get('/task/:id',async(req,res)=>{
     res.send(getTask)
 })
 
-app.get('/movie/:id',async(req,res)=>{
+app.get('/movies/:id',async(req,res)=>{
     const getMovie = await Movie.findById(req.params.id)
     res.send(getMovie)
 })
@@ -145,7 +145,7 @@ app.put('/task/:id',async(req,res)=>{
 })
 
 //Movie
-app.put('/movie/:id',async(req,res)=>{
+app.put('/movies/:id',async(req,res)=>{
     const updateMovie = await Movie.findByIdAndUpdate(req.params.id,req.body,{new:true,runValidators:true})
     res.send(updateMovie)
 })
@@ -168,7 +168,7 @@ app.delete('/task/:id',async(req,res)=>{
     })
 })
 
-app.delete('/movie/:id',async(req,res)=>{
+app.delete('/movies/:id',async(req,res)=>{
     const deleteMovie = await Movie.findByIdAndDelete(req.params.id)
     res.send({
         deleteMovie:deleteMovie.Movie,
