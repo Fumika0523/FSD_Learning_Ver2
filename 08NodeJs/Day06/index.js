@@ -5,6 +5,7 @@ const connection = require ('./db/connection')
 const userRoute = require('./route/userRoute')
 const movieRoute = require('./route/movieRoute')
 const taskRoute = require('./route/taskRoute')
+const taskRoute = require('../')
 
 const PORT = 8002
 
