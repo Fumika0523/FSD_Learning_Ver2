@@ -15,11 +15,10 @@ router.get('/products/:id',async(req,res)=>{
         res.send(getProduct)
         }
         res.send({message:"Product Not Found"})
-   
 })
 
 //POST
-router.post('addProducts',async(req,res)=>{
+router.post('/addproduct',async(req,res)=>{
     const productData = new Products (req.body)
     productData.save()
     if(productData){
