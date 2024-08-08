@@ -11,7 +11,10 @@ router.get('/movies',async(req,res)=>{
 //GET_ID
 router.get('/movies/:id',async(req,res)=>{
     const getMovie = await Movie.findById(req.params.id)
-    res.send(getMovie)
+    if(getMovie){
+        res.send(getMovie)
+    }
+    res.send({message:"Movie Not Found"})
 })
 
 //POST
@@ -24,16 +27,22 @@ router.post('/addmovies',async(req,res)=>{
 //UPDATE
 router.put('/movies/:id',async(req,res)=>{
     const updateMovie = await Movie.findByIdAndUpdate(req.params.id,req.body,{new:true,runValidators:true})
-    res.send(updateMovie)
+    if(updateMovie){
+    return res.send(updateMovie)
+    }
+    res.send({message:"MOvie Not Found, hence unable to update"})
 })
 
 //DELETE
 router.delete('/movies/:id',async(req,res)=>{
-    const deleteMovie = await Movie.findByIdAndDelete(req.params.id)
+    const deletedMovie = await Movie.findByIdAndDelete(req.params.id)
+    if(deletedMovie){
     res.send({
-        deleteMovie:deleteMovie.Movie,
+        deleteMovie:deletedMovie,
         message:"deleted Successfully"
     })
+}
+res.send({message:"Movie Does NOT Exisits, Hopefully its Deleted, please re-check."})
 })
 
 module.exports=router

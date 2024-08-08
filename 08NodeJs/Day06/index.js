@@ -5,7 +5,7 @@ const connection = require ('./db/connection')
 const userRoute = require('./route/userRoute')
 const movieRoute = require('./route/movieRoute')
 const taskRoute = require('./route/taskRoute')
-const taskRoute = require('../')
+const productRoute = require('./route/productRoute')
 
 const PORT = 8002
 
@@ -23,6 +23,7 @@ app.get('/',(req,res)=>{
 app.use(userRoute)
 app.use(movieRoute)
 app.use(taskRoute)
+app.use(productRoute)
 
 // Server Start
 app.listen(PORT,()=>{
