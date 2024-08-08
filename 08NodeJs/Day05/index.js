@@ -103,7 +103,7 @@ app.post('/addtask',async(req,res)=>{
 
 //
 
-app.post('addmovie',async(req,res)=>{
+app.post('/addmovies',async(req,res)=>{
     const moviesData = new Movie (req.body)
     moviesData.save()
     res.send(moviesData)
