@@ -5,12 +5,12 @@ const router = express.Router()
 //GET
 router.get('/task',async(req,res)=>{
     const getAllTask=await Task.find({})
-    res.send({message:"Task All data Not Found"})
+    res.send(getAllTask)
 })
 
 //GET_ID
 router.get('/task/:id',async(req,res)=>{
-    const getTask = await Task.findById(req.params.id)
+     const getTask = await Task.findById(req.params.id)
     if(getTask){
         res.send(getTask)
     }

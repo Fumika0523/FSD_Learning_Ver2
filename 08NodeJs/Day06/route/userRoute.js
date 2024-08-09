@@ -5,7 +5,7 @@ const router = express.Router()
 //GET
 router.get('/users',async(req,res)=>{
     const getAllUsers=await User.find({})
-    res.send(getAllUsers)
+ res.send(getAllUsers)
 })
 
 //GET_ID
@@ -15,6 +15,7 @@ if(getUser){
 res.send(getUser)
 }
 res.send({message:"User Not Found"})
+
 })
 
 //POST
@@ -43,6 +44,7 @@ router.delete('/users/:id',async(req,res)=>{
     })
 }
 res.send({message:"User Does Not Exits. Holefully Its Deleted please re-check"})
+
 })
 
 module.exports = router
