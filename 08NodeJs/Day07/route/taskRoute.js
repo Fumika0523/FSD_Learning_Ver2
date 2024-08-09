@@ -52,12 +52,24 @@ try{
 
 //POST
 router.post('/addtask',async(req,res)=>{
-    const taskData = new Task (req.body)
-    taskData.save()
-    if(taskData){
-    res.send(taskData)
+    // const taskData = new Task (req.body)
+    // taskData.save()
+    // if(taskData){
+    // res.send(taskData)
+    // }
+    // res.send({message:"Task Cannot be posted"})
+
+    try{
+        const postTask = await Task(req.body)
+        if(postTask){
+            res.send(postTask)
+        }
+        res.send(
+            {message:"User Not Found"}
+        )
+    }catch(e){
+        res.send({message:"Some Internal Error"})
     }
-    res.send({message:"Task Cannot be posted"})
 })
 
 //UPDATE
@@ -69,7 +81,7 @@ router.put('/task/:id',async(req,res)=>{
     // res.send({message:"Task NOT FOUND, hence unable to update"})
 
     try{
-        const putTask = await Task.findById(req.params.id)
+        const putTask = await Task.findByIdAndUpdate(req.params.id)
         if(putTask){
             res.send(putTask)
         }
@@ -94,7 +106,7 @@ router.delete('/task/:id',async(req,res)=>{
 //   res.send({message:"Task Does not Exists, Hopefully its Deleted Kindly re-check"})
 
 try{
-    const deleteTask = await Task.findById(req.params.id)
+    const deleteTask = await Task.findByIdAndDelete(req.params.id)
     if(deleteTask){
         res.send(deleteTask)
     }

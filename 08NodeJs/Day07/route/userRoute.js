@@ -45,9 +45,20 @@ res.send(
 
 //POST
 router.post('/adduser',async(req,res)=>{
-    const userData = new User(req.body)
-    userData.save()
-    res.send(userData)
+    // const userData = new User(req.body)
+    // userData.save()
+    // res.send(userData)
+    try{
+        const postUser = await User(req.body)
+        if(postUser){
+            res.send(postUser)
+        }
+        res.send(
+            {message:"User Not Found"}
+        )
+    }catch(e){
+        res.send({message:"Some Internal Error"})
+    }
 })
 
 //UPDATE
@@ -82,7 +93,7 @@ router.delete('/users/:id',async(req,res)=>{
 // res.send({message:"User Does Not Exits. Holefully Its Deleted please re-check"})
 
 try{
-    const deleteUser = await User.findById(req.params.id)
+    const deleteUser = await User.findByIdAndDelete(req.params.id)
     if(deleteUser){
         res.send(deleteUser)
     }
