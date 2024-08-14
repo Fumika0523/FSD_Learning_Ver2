@@ -8,7 +8,7 @@ router.get('/products',async(req,res)=>{
     // res.send(getAllProduct)
 
     try{
-        const getAllProduct = await Product.find({})
+        const getAllProduct = await Products.find({})
         if(getAllProduct){
             res.send(getAllProduct)
         }
@@ -53,12 +53,13 @@ router.post('/addproduct',async(req,res)=>{
     // res.send({message:"Products Cannot be Posted"})
 
     try{
-        const postProduct = await Product(req.body)
+        const postProduct = await Products(req.body)
+        postProduct.save()
         if(postProduct){
             res.send(postProduct)
         }
         res.send(
-            {message:"User Not Found"}
+            {message:"Product Not Found"}
         )
     }catch(e){
         res.send({message:"Some Internal Error"})
@@ -100,7 +101,7 @@ router.delete('/products/:id',async(req,res)=>{
     // res.send({message:"Product Does not exists, hopefully its deleted kindly check"})
 
     try{
-        const deletedProduct = await Products.findByAndDelete(req.params.id)
+        const deletedProduct = await Products.findByIdAndDelete(req.params.id)
         if(deletedProduct){
             res.send(deletedProduct)
         }

@@ -6,10 +6,15 @@ const userRoute = require('./route/userRoute')
 const movieRoute = require('./route/movieRoute')
 const taskRoute = require('./route/taskRoute')
 const productRoute = require('./route/productRoute')
+const serviceRoute = require('./route/serviceRoute')
 
-const PORT = 8002
+const cors=require('cors')
+//dotenv
+const dotenv=require('dotenv')
+dotenv.config()
+app.use(cors())
 
-app.use(express.json())
+const PORT = process.env.PORT
 
 connection()
 app.use(express.json()) // middleware
@@ -24,6 +29,7 @@ app.use(userRoute)
 app.use(movieRoute)
 app.use(taskRoute)
 app.use(productRoute)
+app.use(serviceRoute)
 
 // Server Start
 app.listen(PORT,()=>{

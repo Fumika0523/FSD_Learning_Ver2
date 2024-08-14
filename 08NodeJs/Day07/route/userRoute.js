@@ -1,6 +1,75 @@
 const User = require('../model/userModel')
 const express = require ('express')
 const router = express.Router()
+const bcrypt = require('bcryptjs')
+
+//POST  >> SignUP + SignIN
+//A account already exists with this email address, please signi in using it
+// addduser >> /signup
+router.post('/adduser',async(req,res)=>{
+    //any user email exists them, I shouldnt be able to create the user
+    try{
+    //check for an duplicate email address
+    let user = await User.findOne({
+        $or:[
+        {email:req.body.email},
+        {phone_number:req.body.phone_number}
+            ]
+          }) 
+          
+    // finding a user using a email address if it exists, it will show error message
+        console.log(user)
+        if(user){console.log("User is found", req.body.email)
+            return res.send("User already exists")
+        }
+
+        //password hashing
+        const salt = await bcrypt.genSalt(10)
+        const hashedPassword = await bcrypt.hash(req.body.password,salt)
+
+//         const userData = new User({
+//             name:req.body.name,
+//             age:req.body.age,
+//             phone_number:req.body.phone_number,
+//             email:req.body.email,
+//             registered:req.body.registered,
+//             gender:req.body.gender,
+//             password:hashedPassword
+//         })
+
+const userData = new User ({
+    ...req.body,//making the copy of req.body
+    password:hashedPassword // this one I need to update
+})
+userData.save()
+res.send(userData)
+    }
+    catch(e){
+        res.send("Some Error Occurred")
+    }
+})
+
+//POST  >> SignIn
+router.post('/signin',async(req,res)=>{
+    try{
+    let user = await User.findOne({
+    $and:[
+        {email:req.body.email},
+        {phone_number:req.body.phone_number}
+    ]                
+    })
+    const isMatch = await bcrypt.compare(req.body.password,user.password) //req.body.password >> When a user type, user.password >>> data from DB
+    if(isMatch){
+        res.send(
+        {message:"Successfully signed in", user:user}
+    )
+    }
+    }catch(e){
+        res.send(
+            {message:"Your login credentials are incrrect, kindly check and re-enter"}
+        )
+    }
+})
 
 //GET
 router.get('/users',async(req,res)=>{
@@ -43,23 +112,7 @@ res.send(
 }
 })
 
-//POST
-router.post('/adduser',async(req,res)=>{
-    // const userData = new User(req.body)
-    // userData.save()
-    // res.send(userData)
-    try{
-        const postUser = await User(req.body)
-        if(postUser){
-            res.send(postUser)
-        }
-        res.send(
-            {message:"User Not Found"}
-        )
-    }catch(e){
-        res.send({message:"Some Internal Error"})
-    }
-})
+
 
 //UPDATE
 router.put('/users/:id',async(req,res)=>{

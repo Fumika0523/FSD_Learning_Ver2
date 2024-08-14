@@ -52,20 +52,14 @@ try{
 
 //POST
 router.post('/addtask',async(req,res)=>{
-    // const taskData = new Task (req.body)
-    // taskData.save()
-    // if(taskData){
-    // res.send(taskData)
-    // }
-    // res.send({message:"Task Cannot be posted"})
-
     try{
-        const postTask = await Task(req.body)
+        const postTask = new Task(req.body)
+        postTask.save()
         if(postTask){
             res.send(postTask)
         }
         res.send(
-            {message:"User Not Found"}
+            {message:"Task Not Found"}
         )
     }catch(e){
         res.send({message:"Some Internal Error"})
