@@ -2,7 +2,7 @@ Selecting documents using logical query operators
 
 
 $and – show you how to perform a logical AND operator to select documents.
-$or – It works on multiple fields and at least 1 condition should b met.
+$or – It works on multiple fields and at least 1 condition should be met.
 
 $not – learn how to perform a logical NOT operator to query documents.
 

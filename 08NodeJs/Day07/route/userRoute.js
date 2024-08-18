@@ -59,10 +59,14 @@ router.post('/signin',async(req,res)=>{
     ]                
     })
     const isMatch = await bcrypt.compare(req.body.password,user.password) //req.body.password >> When a user type, user.password >>> data from DB
-    if(isMatch){
-        res.send(
-        {message:"Successfully signed in", user:user}
-    )
+    if(isMatch && user){
+        //Generate a token
+        const token = await user.generateAuthToken()
+         res.send({
+            message:"you have successfully signed in!", 
+            user:user,      //print a user detail
+            token:token     
+         })    
     }
     }catch(e){
         res.send(
@@ -111,8 +115,6 @@ res.send(
 )
 }
 })
-
-
 
 //UPDATE
 router.put('/users/:id',async(req,res)=>{
