@@ -24,6 +24,13 @@ app.get('/',(req,res)=>{
     res.send("Hello Express!")
 })
 
+//registereed a middleware
+
+app.use((req,res,next)=>{
+    console.log(req.method)
+    res.send({message:"Site is currently Down!! Re-visit after sometime!"})
+})
+
 //API URLS
 app.use(userRoute)
 app.use(movieRoute)

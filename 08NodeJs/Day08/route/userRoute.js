@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs')
 //POST  >> SignUP + SignIN
 //A account already exists with this email address, please signi in using it
 // addduser >> /signup
-router.post('/adduser',async(req,res)=>{
+router.post('/signup',async(req,res)=>{
     //any user email exists them, I shouldnt be able to create the user
     try{
     //check for an duplicate email address
