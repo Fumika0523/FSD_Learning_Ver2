@@ -11,7 +11,7 @@ console.log("Token",token)
 
 //1-10 line, generated the token
 
-
+// token,secret_key
 const data1 = jwt.verify("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkpvaG5AZ21haWwuY29tIiwiaWF0IjoxNzIzODg4MzI3LCJleHAiOjE3MjQ0OTMxMjd9.sw_2rlLRvRenVNf2IMO0KZf6nIEql0S0sZGf9o79SNY","john")
 console.log("data1",data1)
 

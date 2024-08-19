@@ -2,6 +2,7 @@ const User = require('../model/userModel')
 const express = require ('express')
 const router = express.Router()
 const bcrypt = require('bcryptjs')
+const auth = require('../middleware/auth')
 
 //POST  >> SignUP + SignIN
 //A account already exists with this email address, please signi in using it
@@ -76,10 +77,10 @@ router.post('/signin',async(req,res)=>{
 })
 
 //GET
-router.get('/users',async(req,res)=>{
+// auth allowing me to get the signed in user
+router.get('/users',auth,async(req,res)=>{
     // const getAllUsers=await User.find({})
     // res.send(getAllUsers)
-
     try{
         const getAllUser = await User.find({})
         if(getAllUser){
@@ -94,6 +95,12 @@ router.get('/users',async(req,res)=>{
         )
     }
 })
+// ex:router.get('/users',>> server is down (middleware is called))
+// ex:router.post('/signin' >> server is down(middleware is called))
+
+//protected route
+//auth to be passes to thoese actually needs not to all
+//router.get('/users',middleware,()=>{})
 
 //GET_ID
 router.get('/users/:id',async(req,res)=>{
