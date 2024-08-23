@@ -2,6 +2,22 @@ const Task = require('../model/taskModel')
 const express = require('express')
 const router = express.Router()
 
+//POST
+router.post('/addtask',async(req,res)=>{
+    try{
+        const postTask = new Task(req.body)
+        await postTask.save()
+        if(postTask){
+            res.send(postTask)
+        }
+        res.send(
+            {message:"Task Not Found"}
+        )
+    }catch(e){
+        res.send({message:"Some Internal Error"})
+    }
+})
+
 //GET
 router.get('/task',async(req,res)=>{
     // const getAllTask=await Task.find({})
@@ -50,21 +66,7 @@ try{
 
 })
 
-//POST
-router.post('/addtask',async(req,res)=>{
-    try{
-        const postTask = new Task(req.body)
-        postTask.save()
-        if(postTask){
-            res.send(postTask)
-        }
-        res.send(
-            {message:"Task Not Found"}
-        )
-    }catch(e){
-        res.send({message:"Some Internal Error"})
-    }
-})
+
 
 //UPDATE
 router.put('/task/:id',async(req,res)=>{

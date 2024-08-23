@@ -1,0 +1,35 @@
+Padding & Border > TRBL is applicable to all
+
+Padding:Space inside the definate borders
+ex:4px, 8px ...
+always clockwise (TRBL)
+Top, Right, Bottom, Left
+
+    padding-top: 20px; > padding top space is 20px
+    padding-right:35px; > padding right space is 35px
+    padding-bottom:40px; > padding bottom space is 40px
+    padding-left:10px  padding left space is 10px
+
+    padding: 30px; > Top, right, bottom, left All the padding space is 30px
+
+    padding:30px 40px; > showing the padding for Top&Bottom (30px), Right&Left (40px),  
+
+    
+Border:Thick/thin outline surrounded to the content
+ex:4px,3px...
+select the style (border-style:)
+select the color (border-color:)
+select the thickness (border-width)
+
+    border-top-width:6px;  > top border thickness is 6px
+    border-bottom-width:5px;    >bottom border thickness is 5px
+    border-left-width:6px;  >left border thickness is 6px
+    border-right-width: 5px;    bottom border thickness is 5px
+
+     border-width:4px; > Top,right,bottom,left All the border thickness is 4px.
+
+    border-width:8px 4px; > Top&bottom(8px), right&left(4px) border thickness
+
+    border-width:7px 4px 5px 2px; > border for top(7px),right(4px),bottom(5px),left(2px)
+
+Margin: outside the border

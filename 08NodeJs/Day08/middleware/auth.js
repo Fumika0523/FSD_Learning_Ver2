@@ -1,4 +1,6 @@
 const jwt2 = require ('jsonwebtoken')
+const User = require('../model/userModel')
+
 const auth=async(req,res,next)=>{
     console.log("Auth Middleware is called")
    
@@ -18,6 +20,10 @@ const auth=async(req,res,next)=>{
 
     const decode=jwt2.verify(token,"nodejs")
     console.log(decode)/// verification is successful
+    req.token=token
+    const user = await User.findOne({_id:decode._id})
+    req.user = user
     next() // auth middleware is successfully executed... you please pass the control for fuether execution
 }
+
 module.exports=auth

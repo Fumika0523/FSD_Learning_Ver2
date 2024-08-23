@@ -27,22 +27,11 @@ router.post('/signup',async(req,res)=>{
         //password hashing
         const salt = await bcrypt.genSalt(10)
         const hashedPassword = await bcrypt.hash(req.body.password,salt)
-
-//         const userData = new User({
-//             name:req.body.name,
-//             age:req.body.age,
-//             phone_number:req.body.phone_number,
-//             email:req.body.email,
-//             registered:req.body.registered,
-//             gender:req.body.gender,
-//             password:hashedPassword
-//         })
-
 const userData = new User ({
     ...req.body,//making the copy of req.body
     password:hashedPassword // this one I need to update
 })
-userData.save()
+await userData.save()
 res.send(userData)
     }
     catch(e){
@@ -78,23 +67,12 @@ router.post('/signin',async(req,res)=>{
 
 //GET
 // auth allowing me to get the signed in user
-router.get('/users',auth,async(req,res)=>{
-    // const getAllUsers=await User.find({})
-    // res.send(getAllUsers)
-    try{
-        const getAllUser = await User.find({})
-        if(getAllUser){
-            res.send(getAllUser)
-        }
-        res.send(
-            {message:"User Not Found"}
-        )
-    }catch(e){
-        res.send(
-            {message:"Some Internal Error"}
-        )
-    }
-})
+router.get('/users/profile',auth,async(req,res)=>{
+    console.log(req.token)
+    console.log(req.user)
+    const getProfile = await User.findById(req.user._id)
+    res.send(getProfile)
+    })
 // ex:router.get('/users',>> server is down (middleware is called))
 // ex:router.post('/signin' >> server is down(middleware is called))
 
@@ -104,11 +82,7 @@ router.get('/users',auth,async(req,res)=>{
 
 //GET_ID
 router.get('/users/:id',async(req,res)=>{
-// const getUser=await User.findById(req.params.id)
-// if(getUser){
-// res.send(getUser)
-// }
-// res.send({message:"User Not Found"})
+
 
 try{
     const getUser = await User.findById(req.params.id)
@@ -124,17 +98,17 @@ res.send(
 })
 
 //UPDATE
-router.put('/users/:id',async(req,res)=>{
-    // const updateUser = await User.findByIdAndUpdate(req.params.id,req.body,{new:true,runValidators:true})
-    // if(updateUser){
-    // return res.send(updateUser)
-    // }
-    // res.send({message:"User Not Found, hence unable to update"})
-
+router.put('/users/profile', auth, async(req,res)=>{
     try{
-        const putUser = await User.findById(req.params.id)
-        if(putUser){
-            res.send(putUser)
+        console.log("Update Profile Id",req.user._id)// auth why will I pass from url
+        if(req.body.password){
+            const salt = await bcrypt.genSalt(10)
+            const hashedPassword=await bcrypt.hash(req.body.password,salt)
+            req.body.password=hashedPassword
+        }
+        const updateUser = await User. findByIdAndUpdate(req.user._id,req.body,{new:true,runValidators:true})
+        if(updateUser){
+            res.send(updateUser)
         }
         res.send({message:"User Not Found"})
     }catch(e){
@@ -144,23 +118,18 @@ router.put('/users/:id',async(req,res)=>{
 })
 
 //DELETE
-router.delete('/users/:id',async(req,res)=>{
-//     const deletedUser = await User.findByIdAndDelete(req.params.id)
-//     if(deletedUser){
-//         res.send({
-//             deleteUser:deletedUser,
-//             message:"Deleted Successfully"
-//     })
-// }
-// res.send({message:"User Does Not Exits. Holefully Its Deleted please re-check"})
-
+router.delete('/users/profile',auth,async(req,res)=>{
 try{
-    const deleteUser = await User.findByIdAndDelete(req.params.id)
-    if(deleteUser){
-        res.send(deleteUser)
+    console.log(req.token)
+    console.log(req.user._id)
+    console.log("Delete Profile ID",req.user._id)
+    const deleteProfile = await User.findByIdAndDelete(req.user._id)
+    if(deleteProfile){
+        res.send({deleteProfile,message:"Profile deleted successfully"})
     }
     res.send(
-        {message:"User Not Found"}
+        {
+        message:"User Not Found"}
     )
 }catch(e){
     res.send(

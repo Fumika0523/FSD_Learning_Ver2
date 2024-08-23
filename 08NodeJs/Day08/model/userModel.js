@@ -30,3 +30,4 @@ userSchema.methods.generateAuthToken = async function(req,res){
 const User= mongoose.model("User",userSchema)
 
 module.exports=User
+// exporting User, available this file to all of the files
