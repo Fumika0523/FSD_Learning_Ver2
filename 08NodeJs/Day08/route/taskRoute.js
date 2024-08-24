@@ -8,7 +8,7 @@ router.post('/addtask',auth,async(req,res)=>{
     //token to be send out to the postman
     //token >> signin
     //console.log(req.user) // auth
-    // try{
+    try{
         const taskData = new Task({
             ...req.body, //making the copy of req.body
             owner:req.user._id // this one I need to update
@@ -24,10 +24,10 @@ router.post('/addtask',auth,async(req,res)=>{
             {
                 message:"Task cannot be added"
             })
-    // }catch(e){
-    //     res.send(
-    //         {message:"Some Internal Error"}
-    //     )}
+    }catch(e){
+        res.send(
+            {message:"Some Internal Error"}
+        )}
 })
 
 //GET
