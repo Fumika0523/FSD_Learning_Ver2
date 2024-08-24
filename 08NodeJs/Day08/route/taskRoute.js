@@ -1,21 +1,33 @@
 const Task = require('../model/taskModel')
 const express = require('express')
 const router = express.Router()
+const auth = require('../middleware/auth')
 
 //POST
-router.post('/addtask',async(req,res)=>{
-    try{
-        const postTask = new Task(req.body)
-        await postTask.save()
-        if(postTask){
-            res.send(postTask)
+router.post('/addtask',auth,async(req,res)=>{
+    //token to be send out to the postman
+    //token >> signin
+    //console.log(req.user) // auth
+    // try{
+        const taskData = new Task({
+            ...req.body, //making the copy of req.body
+            owner:req.user._id // this one I need to update
+        })
+         if(taskData){
+            await taskData.save() // async & await >> its not going to block, unless you finish your work (taskData.save()), don't procees, waiting time to operation complete, 
+            //save() >> save to the DB
+            res.send({
+                taskData,
+            message:"Task has been added successfully"})
         }
         res.send(
-            {message:"Task Not Found"}
-        )
-    }catch(e){
-        res.send({message:"Some Internal Error"})
-    }
+            {
+                message:"Task cannot be added"
+            })
+    // }catch(e){
+    //     res.send(
+    //         {message:"Some Internal Error"}
+    //     )}
 })
 
 //GET

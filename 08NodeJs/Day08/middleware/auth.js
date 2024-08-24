@@ -21,6 +21,8 @@ const auth=async(req,res,next)=>{
     const decode=jwt2.verify(token,"nodejs")
     console.log(decode)/// verification is successful
     req.token=token
+    // _id: Object Id of the specific user
+    // can we find out the user with _id? yes
     const user = await User.findOne({_id:decode._id})
     req.user = user
     next() // auth middleware is successfully executed... you please pass the control for fuether execution

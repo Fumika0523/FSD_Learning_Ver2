@@ -27,5 +27,9 @@ not going to create relationship
 create an relationship
 virtual field
 
-taskmodel >> userid
-usermodel
+Taskmodel >> userid (updated our model)
+ >create a relationship between the collection
+    > Task + user
+    > User_id-(Task) + Virtual Field - (User Model)
+
+    

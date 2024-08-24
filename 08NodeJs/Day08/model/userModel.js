@@ -26,6 +26,13 @@ userSchema.methods.generateAuthToken = async function(req,res){
     console.log(token)
     return token
 }
+//virtual field we will so that we connect the collections
+//'taskRel' >>> developerDefined field name
+userSchema.virtual('taskRel',{
+    ref:"Task", // refer which mode?
+    localField:"_id", // current model field
+    foreignField:"owner" // 
+})
 
 const User= mongoose.model("User",userSchema)
 
