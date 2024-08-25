@@ -82,8 +82,6 @@ router.get('/users/profile',auth,async(req,res)=>{
 
 //GET_ID
 router.get('/users/:id',async(req,res)=>{
-
-
 try{
     const getUser = await User.findById(req.params.id)
     if(getUser){
