@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function inside a function abc() main function dependant on the
+
+        function abc(){
+            console.log("abc")
+            function xyz(){
+                console.log("abc+xyz")
+            }
+        }
+        abc()
+
+        setTimeout(()=>console.log("abc1234"),100)
+
+        // var abc=document.getElementById(`test`)
+        // abc.addEventListener(`click`,()=>{
+        //     console.log("Btn is cliecked again")
+        // })
+
+        //arr.map(()=>console.log("abc"))
+
+        //all the examples of call backs
+        //we should know how to create
+
+        let arr75=[1,4,5,78,90]
+        let res75=arr75.filter((element)=>element>40)
+        console.log(res75)
+
+        //come up with more examples(5-7)
+
+        // array.every()
+        // array.some()
+        // array.filter()
+        // array.reduce()
+        // array.map()
+        // setTimeout()
+        // addEventListener()
+
+        setTimeout(()=>console.log("Old Hello"),500)
+        let test=()=>console.log("New Hello")
+        setTimeout(test,1000) //function inside a function > setTimeout > test function
+
+        //
+        function one(){
+            console.log("one")
+        }
+        function two(){
+            console.log("two")
+            //one()
+            //one
+        }
+        two()
+
+        //inside two >> one
+        //this is not a callback
+        //calling of the function should be dependant on main function
+        //two() >> one should be called automatically without () this
+        //in the above example thats not the case, we will have to call the function
+
+        // function three(){
+        //     console.log("three")
+        // }
+        // let five=()=>console.log("five")
+
+        // function four(callback,cbk1){
+        //     console.log("four")
+        //     callback()
+        //     cbk1()
+        // }
+        // four(three,five)
+
+        // //
+        // function three(){
+        //     console.log("three")
+        // } 
+        // let five=(callback,cbk1)=>console.log("five")
+
+        // function four(){
+        //     console.log("four")
+        //     callback()
+        //     cbk1()
+        // }
+        // four(three,five)
+        // 1> display name > responsible for printing
+        // 2 > take the name
+
+        function were(){
+            console.log("CBK Function")
+        }
+      
+        function when(callback){
+            callback()
+        }
+        when(were)
+
+        function were1(x,y){
+            console.log("CBK Function1",x,y)
+        }
+
+        ///////////////////
+
+        function were1(x,y){
+            console.log("CBK Function1",x,y)
+        }
+
+        function when1(a,callback,b){//a->Fumika b=> Poonam
+            callback(a,b)//were1 function
+        }
+        when1("Fumika",were1,"Poonam")
+        ///1
+
+        function were1(x,y){
+            console.log("CBK Function1",x,y)
+        }
+
+        function when1(a,callback,b){
+            callback(a,b)
+        }
+        when1("Fumika",were1,"Poonam")
+
+        //2
+
+        function were1(x,y){
+            console.log("CBK Function1",x,y)
+        }
+
+        function when1(a,callback,b){
+            callback(a,b)
+        }
+        when1("fumika",were1,"poonam")
+        //
+
+        //display name> responsible for printing
+        //take the name
+        //callback
+        //takeNum("Fumika",displayname)
+
+        function displayName(z){
+            console.log(z)
+        }
+
+        function takeNum(callback,d){
+            callback(d)
+        }
+        takeNum(displayName,"Fumika")
+
+        //
+        function displayscores(score){
+            console.log("My score is: ",score)
+        }
+
+        function takenum(callback,a){
+            callback(a)
+        }
+        takenum(displayscores,79)
+////////////////////////////
+
+        function displayName(z){
+            console.log("My name is",z)
+        }
+
+        function takeName(callback,d){
+            callback(d)
+        }
+        takeName(displayName,"Fumika")
+
+/////////
+
+
+    </script>
+</body>
+</html>

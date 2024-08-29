@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let req=fetch(`https://restcountries.com/v3.1/all`)
+        // req
+        // .then((value)=>value.json())//
+        // .then((res)=>{
+        //     console.log(res)
+
+       
+        let req1=fetch(`https://restcountries.com/v3.1/all`)
+        req1.then((value)=>value.json())
+        .then((res)=>{
+            console.log(res)
+        for(var i=0;i<=res.length;i++){///250 times > it will 250 image + h6
+        console.log(res[i]?.flags?.png)
+        //i didnt havev the element
+        let imageTag=document.createElement(`img`)
+        imageTag.setAttribute(`src`,res[i]?.flags?.png)
+        let h6Tag=document.createElement(`h6`)
+        h6Tag.innerHTML=res[i]?.name?.common
+        document.body.append(imageTag,h6Tag)
+        }
+    })
+
+        //2 apples >
+        // F -> 7th (2)
+        //Friend1 -> 6th ==(2)
+
+        //=> 3rd Floor ===(2)
+
+        //Function
+        //Data at multiple places > return keyword
+        //arrow in 1 line >> we can skip return keyword
+</script>
+</body>
+</html>

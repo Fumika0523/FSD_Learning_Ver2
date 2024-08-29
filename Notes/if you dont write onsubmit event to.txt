@@ -1,0 +1,22 @@
+>if you dont write onsubmit event to the form tag, the function does not work. >> error message wont be shown.
+>used onsubmit event for the form and passed the function myForm along with the event parameter.
+>whenever you using the Form tag, the type should be "submit" for  button/input for the form submission.
+>Created input tags to fill the value with id in each of them and created submit button.
+>Created span tags with the id to show the error message if the condition was failed
+>stored the id("username").value to usernameForm. to use this for condition >> if(usernameForm.length==){console.log("username shouldn't be empty")}
+>stored the id("usernameError") to "usernameError" so if the condition failed, the error message can be shown in a browser (usernameError.innerText="username shouldn't be empty")
+
+>>>
+
+AddMovie_Formik.jsx
+>used a useFormik hook and useFormik takes initialValue and onSubmit. initialvalues takes the object (as per the mockAPI data) with empty value, and onSubmit event takes function which gets the update value in a object form 
+>created postMovies() to send a new movie data by API calling with POST method.JSON.stringify(newMovie)>>passing a object and sending to the server with converting to string format
+>getMovieData() is updating a data to browser by API calling.
+>setMovieData() is passed from App.jsx as a prop to store movie data.
+>onSubmit= {formik.handleSubmit} << automatically calling onSubmit method of the useFormik
+>onChange={formik.handleChange} >> automatically help us to edit and write in the form
+>value={formik.values.moviename}>> automatically update the values.
+
+//Schema
+
+

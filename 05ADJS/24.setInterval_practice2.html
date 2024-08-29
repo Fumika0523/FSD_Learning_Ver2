@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS */
+    #divTest{
+        height:530px;
+        align-content: center;
+    }
+    </style>
+</head>
+<div id="divTest">Hi</div>
+<body>
+    <!-- 1-10, print your name -->
+    <script>
+        // for (var i=1;i<=10;i++){
+        //     console.log(i)
+        // }
+        let a=0
+        const Test= setInterval(()=>{
+        a=a+1
+        console.log(a)
+        if (a ==10){
+        clearInterval(Test);
+        console.log("Happy New Year")
+        }
+        let divTimer=document.getElementById("divTest")
+        divTimer.innerHTML=a
+        divTimer.style.fontSize="50px";
+        // divTimer.style.textAlign="center";
+        // divTimer.style.border="2px solid black";
+        divTimer.style.textAlign="center";
+        //divTimer.style.height="530px";
+        //divTimer.style.alignContent="center";
+        divTimer.style.color="blue";
+        divTimer.style.backgroundColor="pink";
+        if (a ==10){
+        clearInterval(Test);
+        divTimer.innerHTML=("Happy New Year")
+        divTimer.style.color="red";
+        }
+        },200)
+
+        //setTimeout:Run code with a time delay
+        //setInterval:Repeatedly run code at every time interval
+    </script>
+</body>
+</html>

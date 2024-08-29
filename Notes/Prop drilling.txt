@@ -1,0 +1,11 @@
+Prop drilling:
+prop drilling occurs when a parent component passes data down to its children and then these children pass the same data down to their own childres. this process can continue indefinitely. At the end its a long chain o f component dependencies that can be difficult to manage and maintain.
+
+DataA > Component A1 >> component A2 
+	props=(dataOfA:A)
+
+Fix Prop Drilling:
+Use a state management library, such as Redux or MobX. They provide a centralized store for managing application state which can help  to eliminate the need for prop drilling. Instead of  passing data down through multiple layers of components, you can simple connect each component to the store and access the data that you need directly
+
+DataA >  >> component A2 
+	props=(dataOfA:A)

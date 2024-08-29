@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- funtions >
+    when you want perform same operations again 
+    Click event
+     -->
+
+     <button onclick="sum(event)">Click Me</button>
+     <button onclick="test()">Click Again</button>
+     <button onclick="add()">Click Again2</button>
+     <button onclick="push()">ClickMe2</button>
+     <button onclick="forLoop()">forLoop</button>
+     <button onclick="table(5)">table5</button>
+     <button onclick="table(2)">table2</button>
+     <button onclick="squareNum(5)">square</button>
+     <button onclick="cubeNum(5)">cube</button>
+     <button onclick="sumArr([20,40,50,60])">sum</button>
+     <button onclick="cirNum(5)">areCirNum</button>
+     <button onclick="cbrtNum(64)">cbrtNum</button>
+     <input type="text" name="" id="" value="" oninput="display(event)">
+     <input type="text" name="" id="" value="" onblur="test3(event)">
+     <script>
+        function sum(event){
+            console.log(event)//pointer event
+            console.log(2+2)
+        }
+
+        //onClick Event
+        //Event > when you perform and action, and event will be triggered
+        //1st way > directory to HTML
+
+        function test(){
+            console.log("Test Function")
+        }
+
+        function add(){
+            console.log(5+5)
+        }
+
+        function push(){
+            console.log(10+10)
+        }
+
+        function forLoop(){
+            for(var i=1;i<=10;i++){
+                console.log(i)
+            }
+        }
+
+        function table(n){
+            for(var i=1;i<=10;i++){
+                console.log(i*n)
+            }
+        }
+
+        function squareNum(a){
+            // console.log(a)
+            // console.log(a*a)
+            console.log(`square of ${a} is ${a*a}`)
+        }
+        /////////////
+
+        function cubeNum(b){
+            console.log(`cube of ${b} is ${b*b*b}`) //template literals
+        }
+        //////////////////////////////////////
+        // var arr=[10,30,40,50]
+        // var sum=0;
+        // for(var i=0;i<arr.length;i++){
+        //     sum=sum+arr[i]
+        // }
+        // console.log(sum)
+        //////////////////////////////////////////////////////////
+
+        function sumArr(a){
+            var sum=0;
+            for(var i=0;i<a.length;i++){
+                sum=sum+a[i]
+            }
+            console.log(sum)
+        }
+
+        //forLoop,function,onclick,template literals
+
+        ///
+        //are of circle
+        //PI*r*r//pi*3*3
+        var r= 3
+        console.log(Math.PI*r*r)
+        ////
+
+        // write the function to find the are of circle of any given number attach of click given on the button to display the output
+        function cirNum(r){
+            console.log(Math.PI*r*r)
+            console.log((Math.PI*r*r).toFixed(2))
+        console.log(`area of ${r} is ${Math.PI*r*r} `)
+        console.log(`are of ${r} is ${(Math.PI*r*r).toFixed(2)}`)
+        }
+
+        // var num=45.78989898989
+        // console.log(num.toFixed(2))//45.78
+
+         //find out cube root of number 27
+            console.log(Math.cbrt(27))
+
+        //function
+
+        function cbrtNum(a){
+            console.log(Math.cbrt(a))
+            console.log(`cube root of number ${a} is ${Math.cbrt(a)}`)
+        }
+
+                //onclickEvent
+        //Event > When you perform and action, and event will be triggered
+        //1st way > Directory to HTML
+
+        function test(){
+            console.log("Test Function")
+        }
+        //console.log("My name is Fumika")
+    //oninput
+    function display(event){
+        console.log(event)//event
+        console.log(event.target.value)
+        console.log(`My name is ${event.target.value}`)
+    }
+
+    //onblur
+    function test3(event){
+        console.log(event)//focus event
+        console.log(event.target.value)
+        console.log(`My name is ${event.target.value}`)
+    }
+
+
+
+     </script>
+</body>
+</html>

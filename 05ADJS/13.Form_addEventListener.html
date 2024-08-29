@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="myForm">
+        <label for="username">Enter your Username</label>
+        <input type="text" name="username" id="username">
+        <span id="usernameError"></span><hr>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <span id="emailError"></span><hr>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <span id="passwordError"></span><hr>
+
+        <input type="submit" value="Submit">
+    </form>
+<script>
+    let myForm=document.getElementById("myForm")
+    console.log(myForm)
+    //arrow function
+    myForm.addEventListener("submit",()=>{
+        event.preventDefault()//stop the default behavior 
+        let usernameTest=document.getElementById("username").value
+        let passwordTest=document.getElementById("password").value
+        let emailTest=document.getElementById("email").value
+        let usernameError=document.getElementById("usernameError")
+        let passwordError=document.getElementById("passwordError")
+        let emailError=document.getElementById("emailError")
+        console.log(usernameTest,passwordTest,emailTest)
+
+        //username
+        if(usernameTest.length==0){
+            console.log("Username should not be empty")
+            usernameError.innerText="Username should not be empy"
+            usernameError.style.color="purple"
+        }
+        else if(usernameTest.length<5){
+            console.log("username must be more than 5 characters")
+            usernameError.innerText="username must be more than 5 characters"
+            usernameError.style.color="red"
+        }
+        else if(usernameTest.length>=5){
+            console.log("Username is correct please proceed")
+            usernameError.innerText="Username is correct please proceed"
+            usernameError.style.color="green"
+        }
+
+        //password
+        if(passwordTest.length==0){
+            console.log("password should not be empty")
+            passwordError.innerText="password should not be empty"
+            passwordError.style.color="red"
+        }
+        else if(passwordTest.length<5){
+            console.log("password is too short")
+            passwordError.innerText="password is too short"
+            passwordError.style.color="red"
+        }
+        else if(passwordTest.length==5){
+            console.log("password is weak")
+            passwordError.innerText="password is weak"
+            passwordError.style.color="red"
+        }
+        else if (passwordTest.length>5){
+            console.log("Password is strong.. please proceed")
+            passwordError.innerText="password is strong..please proceed"
+            passwordError.style.color="green"
+        }
+
+        //email
+        if(emailTest.length==0){
+            console.log("please enter your email")
+            emailError.innerText="please enter your email"
+            emailError.style.color="red"
+        }
+        else if(emailTest.length>=12){
+            console.log("email. is correct, please proceed")
+            emailError.innerText="email is correct. please proceed"
+            emailError.style.color="green"
+        }
+    })
+    
+</script>
+
+<!-- ///
+//form.html
+//fprm_addeventlistener.html
+/////////
+
+//onsubmit(even) :(JS to HTML becos we are passing the function to form)> Form to 
+//html> js : addeventlistener
+
+//form tag using a event() -->
+<!-- only input can get value  -->
+
+<!-- create the form in both ways -->
+
+</body>
+</html>

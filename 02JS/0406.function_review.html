@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //arrow function
+    //no return () statement
+    //need to declear first
+    //no function keyword,
+    //you can directly pass the number to function
+    //if the function is small, you dont need to write {}
+    //you need to have arrow =>
+
+     let arrwfunction=()=>{console.log("Arrowfunction")}
+     arrwfunction()//Arrowfunction
+
+     //arrow
+     let addfunction=()=>{console.log(5+5)}
+     addfunction()//10
+
+     //normal
+     function sumNum(a,b){
+        console.log(a+b)
+        return a+b
+     }
+     var total=sumNum(5,5)
+     console.log(total)
+
+     //arrow function
+     let arrwsqureNum=(x)=>console.log(x*x)
+     arrwsqureNum(3)
+
+     //normal function
+     function squreNum(y){
+        console.log(y*y)
+     }
+     squreNum(3)
+
+     //arrow function
+     let singlearrwfun=()=>3
+     let sqx=singlearrwfun()
+     console.log(sqx)//3
+
+     //arrow function
+     let multiarrwfun=()=>{
+        let a=20;
+        return a
+     }
+     console.log(multiarrwfun())//20
+
+    </script>
+</body>
+</html>

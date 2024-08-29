@@ -1,0 +1,28 @@
+justify-it works with width / should be written on parent tag
+ >horizontal allignment , it works with Width 
+   justify-items: center;
+   justify-items:end;
+   justify-items:start;
+   justify-items:stretch < stretch is default
+
+align  / should be written on parent tag
+>  vertical alignment, it works with height
+  align-items:center;
+  align-items:start; 
+  align-items:stretch; < stretch is default
+  align-items:end;
+
+  justify-content:
+    justify-content:center;
+    justify-content:start;
+    justify-content:space-between;
+    justify-content:space-around;
+    justify-content:space-evenly;
+    justify-content:end;
+
+  allign-content:
+    align-items:center;
+    align-items:start; 
+    align-items:stretch; < stretch is default 
+    align-items:end; 
+

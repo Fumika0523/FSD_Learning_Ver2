@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Create a function that takes an array of numbers and return "Boom!" ,if the digit 7 appears in the array.
+Otherwise, return "there is no 7 in the array".
+
+sevenBoom([1, 2, 3, 4, 5, 6, 7]) ➞ "Boom!"
+
+sevenBoom([8, 6, 33, 100]) ➞ "there is no 7 in the array"
+
+sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
+
+______________________________________________ -->
+
+<script>
+ function sevenBoom(a) {
+    // console.log(a)
+    let newarr=a.join("")
+    // console.log(newarr)
+    if(newarr.includes(7)){
+        console.log("Boom!")
+    }
+    else{
+        console.log("there is no 7 in the array")
+    }
+    }
+    sevenBoom([1, 2, 3, 4, 5, 6, 7])
+    sevenBoom([8, 6, 33, 100]) 
+    sevenBoom([2, 55, 60, 97, 86])
+</script>
+</body>
+</html>

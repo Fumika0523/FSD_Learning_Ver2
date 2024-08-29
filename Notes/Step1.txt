@@ -1,0 +1,91 @@
+Step1:
+Installations for an existing App:
+npm install @reduxjs/toolkit
+>if you need React bindings:
+npm install react-redux
+
+Step2:
+Create a Redux Store:
+Create file (store.js) and import the configureStore API from Redux Toolkit.
+
+import { configureStore } from '@reduxjs/toolkit'
+
+export const store = configureStore({
+  reducer: {},
+})
+
+Step3:
+Create a Redux State Slice
+Create a new file (cartSlice.js) >> (textSlice.js), import the createSlice API from Redux Toolkit
+
+import { createSlice } from "@reduxjs/toolkit";
+
+const cartSlice=createSlice({
+    name:"cart",
+    initialState:{
+        items:[]//kept as a empty
+    },
+    reducers:{
+
+    }
+})
+export default cartSlice
+
+-----
+
+import { createSlice } from "@reduxjs/toolkit";
+
+const textSlice = createSlice({
+    name:"text",
+    initialState:{
+        items:["Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or another type of compatible computer."]//kept as a empty
+    },
+    reducers:{
+
+    }
+})
+export default textSlice
+
+step4:
+Provide the Slice to the store
+
+step5:Provide the Redux Store to React
+once the store is created, we make it available to our React components by putting a React-Redux <Provider> around our application in App.jsx
+ <Provider store={store}>
+  </Provider>
+
+Step6:
+within reducers:{}, action Item is created 
+---> addItem:(state,action)=>{
+state,items.push(action.payload) <--- data is pushed to the empty array
+console.log(action.payload)
+},
+
+export const {aaddItem}= cartSlice.action
+
+Step7:
+in MovieDisplay.jsx, pass element as props --> element={element} and MovieCard.jsx too.
+
+Step8:
+created a button for Redux in MovieCard.jsx with onCLick={()=>{handleAdditem(element)}}
+
+Step9:
+created function for Redux button. When the button is pressed, dispatch the action > reducer function
+import {useDispatch} and {addItem}
+
+const dispatch = useDispatch()
+const handleAdditem=(item)=>{
+console.log(item)
+dispatch(addItem(item))
+}
+
+Step10:
+in NavBar.jsx, created function to subscribe to the store
+const cartItems=useSelector(store=>store.cart.items)
+console.log(cartItems.length)
+
+Step11:
+in NavBar.jsx, created NavItem for Redux.
+Redux{cartItems.length}
+
+

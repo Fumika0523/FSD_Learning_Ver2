@@ -1,0 +1,35 @@
+D(Document)O(Object)M(Model)
+D:HTML Page
+O:Element & Attributes
+M:Tree Structure of HTML elements
+
+Node:
+Everything in an HTML Page is node.
+Entire document is a document node.
+Each element in a hTML page is element node
+All text of the document is text nodes
+All attributes of elements are attributes nodes.
+Comments on page are comment node
+
+HTML (Root Element) > Head (Parent: first child element) >Title (Child)
+                                    >Meta(Child)
+                                    >Link(Child)
+                    >Body (Parent: last child element)>Header (child)
+                                                    >Section(child/parent)>H1(child:header Text)
+                                                                          >P(child:paragraph text)
+                                                    >Footer(child)  
+
+                                                    GET SET ADD DELETE 
+
+//onclick > 1 time click --> HTML element will be printed
+//onblclick > double click -->HTML element will be printed
+
+//oninput >as you type, you get the output
+//onchange:you type and click somewhere/hit enter, the output will be shown
+
+//keyDown : events provide a code indicating which key is pressed
+//keyUp : events provide a code indicating which key is pressed
+//keyPress :indicates which character was entered.
+
+//mouseup: event is fired at an Element when a button on a pointing device (such as a mouse or trackpad) is released while the pointer is located inside it.
+//mousedown:  event is fired at an Element when a pointing device button is pressed while the pointer is inside the element.

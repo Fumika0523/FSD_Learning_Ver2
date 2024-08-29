@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .child{
+        background-color:blueviolet;
+        height:50px;
+        width:50px;
+        margin:1%;
+        text-align: center;
+        font-size: 45px;
+        color: black;
+    }
+
+    .parent{
+        /* align itself row wise */
+        display:flex;
+        flex-direction:row;
+        width:25%;
+        border: 1px solid black;
+    }
+
+    .rowReverseDiretionParent{
+        flex-direction:row-reverse;
+    }
+
+    .colDirectionParent{
+        flex-direction:column;
+    }
+
+    .colreverseDirectionParent{
+        flex-direction: column-reverse;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+    </div>
+    <hr>
+    <div class="rowReverseDiretionParent parent">
+            <div class="child">1</div>
+            <div class="child">2</div>
+            <div class="child">3</div>
+            <div class="child">4</div>
+            <div class="child">5</div>
+            <div class="child">6</div>
+    </div>
+   
+    <hr>
+    <div class="colDirectionParent parent">
+            <div class="child">1</div>
+            <div class="child">2</div>
+            <div class="child">3</div>
+            <div class="child">4</div>
+            <div class="child">5</div>
+            <div class="child">6</div>
+    </div>
+    <hr>
+    <div class="colreverseDirectionParent parent">
+            <div class="child">1</div>
+            <div class="child">2</div>
+            <div class="child">3</div>
+            <div class="child">4</div>
+            <div class="child">5</div>
+            <div class="child">6</div>
+    </div>
+</body>
+</html>

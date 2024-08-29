@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test01">Google is best online searching tool</div>
+    <div id="test02">Lorem ipsum dolor sit amet consecteur adipisicing elit</div>
+    <!-- <div>Google is the best online searching tool</div> -->
+    <div id="test03"></div>
+
+    <div class="test04"></div>
+    <div class="test04"></div>
+    <div class="test04"></div>
+    <div class="test04"></div>
+    <div class="test04"></div>
+   <script>
+        // let divTest1=document.createElement("div")
+        // divTest1.setAttribute("class","div1")
+        // divTest1.innerText="Google is the best online searching tool"
+        // document.body.append(divTest1)
+        // console.log("divTest1")
+
+        //createElements()
+        //Target the elements which are in HTML page
+        //document >>> using
+
+        //document.getElementById(idname)
+        //idname in double quote
+        const result01=document.getElementById("test01")
+        console.log(result01)
+
+        const result02=document.getElementById("test02")
+        console.log(result02)
+
+        //innerHTML || innerText
+        test01.innerText="ABC"
+        //styling
+        test02.style.backgroundColor="green"
+        //
+        test03.innerText="Hello"
+        test03.style.border="3px solid red"
+        test03.style.height="50px"
+        test03.style.width="100px"
+
+        //document.getElementsByClassName("classname")
+        //Diff
+        //id || class
+        //Element || Elements
+        //only 1 || multiple times
+
+        let result03=document.getElementsByClassName("test04")  
+        console.log(result03)
+
+        //array
+
+        //you have use a forloop > DOM > updates
+        //for(initilise, condition, increment/decrement)
+
+        for(var i=1;i<5;i++){
+            console.log(i)
+        }
+
+        //array > i=0 || index starts with 0
+        //array > array.length
+
+        for(var i=0;i<result03.length;i++){
+            //console.log(result03[i])
+            let output=result03[i] //result03:array 
+            console.log(output) //output:individual div
+            output.innerText="Hello World"
+            output.style.border="2px solid blue"
+        }
+
+        //
+        for(var i=1;i<=10;i++){
+            console.log(2*i)
+        }
+
+        let num=20;
+        for(var i=1;i<=10;i++){
+            console.log(num*i)
+        }
+        
+        for(var i=1;i<10;i++){
+            console.log(5*i)
+        }
+
+        let num1=5;
+        for(var i=1;i<=10;i++){
+            console.log(num1*i)
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let yourAge=prompt("Enter your age?")
+        let mumAge=prompt("Enter your mum age?")
+        console.log(parseInt(yourAge)+parseInt(mumAge))
+       let totalAge=parseInt(yourAge)+parseInt(mumAge)
+       console.log(totalAge)
+        //if addition is more than 100 > pass
+        // less than 100, fail
+        //null > "please fill up the data" 
+        // let totalAge=parseInt(yourAge)+parseInt(mumAge)
+        // console.log(totalAge)
+
+        if(totalAge>100){
+         console.log("you passed")
+         alert("you passed")
+        }
+        else if(totalAge<100){
+             console.log("you failed")
+             alert("you failed")
+         }
+         //isNaN()
+         else if(isNaN(totalAge)){
+            console.log("fill the age again")
+            alert("fill the age again")
+         }
+    </script>
+</body>
+</html>

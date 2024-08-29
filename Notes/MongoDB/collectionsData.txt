@@ -1,0 +1,42 @@
+db.users.insertMany([
+    { "name": "John", "age": 28 },
+    { "name": "Alice", "age": 34 },
+    { "name": "Bob", "age": 42 },
+    { "name": "Eve", "age": 25 },
+    { "name": "Charlie", "age": 31 }
+])
+
+db.sales.insertMany([
+	{ "_id" : 1, "item" : "Americanos", "price" : 5, "size": "Short", "quantity" : 22, "date" : ISODate("2022-01-15T08:00:00Z") },
+	{ "_id" : 2, "item" : "Cappuccino", "price" : 6, "size": "Short","quantity" : 12, "date" : ISODate("2022-01-16T09:00:00Z") },
+	{ "_id" : 3, "item" : "Lattes", "price" : 15, "size": "Grande","quantity" : 25, "date" : ISODate("2022-01-16T09:05:00Z") },
+	{ "_id" : 4, "item" : "Mochas", "price" : 25,"size": "Tall", "quantity" : 11, "date" : ISODate("2022-02-17T08:00:00Z") },
+	{ "_id" : 5, "item" : "Americanos", "price" : 10, "size": "Grande","quantity" : 12, "date" : ISODate("2022-02-18T21:06:00Z") },
+	{ "_id" : 6, "item" : "Cappuccino", "price" : 7, "size": "Tall","quantity" : 20, "date" : ISODate("2022-02-20T10:07:00Z") },
+	{ "_id" : 7, "item" : "Lattes", "price" : 25,"size": "Tall", "quantity" : 30, "date" : ISODate("2022-02-21T10:08:00Z") },
+	{ "_id" : 8, "item" : "Americanos", "price" : 10, "size": "Grande","quantity" : 21, "date" : ISODate("2022-02-22T14:09:00Z") },
+	{ "_id" : 9, "item" : "Cappuccino", "price" : 10, "size": "Grande","quantity" : 17, "date" : ISODate("2022-02-23T14:09:00Z") },
+	{ "_id" : 10, "item" : "Americanos", "price" : 8, "size": "Tall","quantity" : 15, "date" : ISODate("2022-02-25T14:09:00Z")}
+]);
+
+db.orders.insertMany([
+  { "_id" : 1, "customer" : "John Doe", "orderAmount" : 250, "items" : ["Laptop", "Mouse"], "orderDate" : ISODate("2023-03-15T10:00:00Z") },
+  { "_id" : 2, "customer" : "Jane Smith", "orderAmount" : 120, "items" : ["Tablet"], "orderDate" : ISODate("2023-03-16T11:00:00Z") },
+  { "_id" : 3, "customer" : "Mary Johnson", "orderAmount" : 350, "items" : ["Smartphone", "Headphones"], "orderDate" : ISODate("2023-03-17T12:00:00Z") },
+  { "_id" : 4, "customer" : "James Brown", "orderAmount" : 90, "items" : ["Keyboard", "Mouse"], "orderDate" : ISODate("2023-04-15T13:00:00Z") },
+  { "_id" : 5, "customer" : "Patricia Davis", "orderAmount" : 450, "items" : ["Smartwatch", "Tablet"], "orderDate" : ISODate("2023-04-18T14:00:00Z") },
+  { "_id" : 6, "customer" : "Michael Wilson", "orderAmount" : 600, "items" : ["Laptop", "Printer"], "orderDate" : ISODate("2023-04-20T15:00:00Z") },
+  { "_id" : 7, "customer" : "Linda Martinez", "orderAmount" : 80, "items" : ["Mouse", "Keyboard"], "orderDate" : ISODate("2023-04-21T16:00:00Z") },
+  { "_id" : 8, "customer" : "David Garcia", "orderAmount" : 350, "items" : ["Smartphone"], "orderDate" : ISODate("2023-04-22T17:00:00Z") },
+  { "_id" : 9, "customer" : "Susan Rodriguez", "orderAmount" : 200, "items" : ["Tablet", "Headphones"], "orderDate" : ISODate("2023-04-23T18:00:00Z") },
+  { "_id" : 10, "customer" : "Robert Martinez", "orderAmount" : 500, "items" : ["Laptop", "Smartwatch"], "orderDate" : ISODate("2023-04-25T19:00:00Z")}
+]);
+
+db.products.insertMany([
+    { "_id" : 1, "name" : "xPhone", "price" : 799, "releaseDate": ISODate("2011-05-14"), "spec" : { "ram" : 4, "screen" : 6.5, "cpu" : 2.66 },"color":["white","black"],"storage":[64,128,256]},
+    { "_id" : 2, "name" : "xTablet", "price" : 899, "releaseDate": ISODate("2011-09-01") , "spec" : { "ram" : 16, "screen" : 9.5, "cpu" : 3.66 },"color":["white","black","purple"],"storage":[128,256,512]},
+    { "_id" : 3, "name" : "SmartTablet", "price" : 899, "releaseDate": ISODate("2015-01-14"), "spec" : { "ram" : 12, "screen" : 9.7, "cpu" : 3.66 },"color":["blue"],"storage":[16,64,128]},
+    { "_id" : 4, "name" : "SmartPad", "price" : 699, "releaseDate": ISODate("2020-05-14"),"spec" : { "ram" : 8, "screen" : 9.7, "cpu" : 1.66 },"color":["white","orange","gold","gray"],"storage":[128,256,1024]},
+    { "_id" : 5, "name" : "SmartPhone", "price" : 599,"releaseDate": ISODate("2022-09-14"), "spec" : { "ram" : 4, "screen" : 5.7, "cpu" : 1.66 },"color":["white","orange","gold","gray"],"storage":[128,256]}
+ ])
+This paste expires in <1 hour. Public IP access. Share whatever you see with others in seconds with Context.Terms of ServiceReport this

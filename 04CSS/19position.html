@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color:blue;
+            width:20%;
+            padding:2%;
+            border-radius:2%;
+            box-shadow: 1px 2px 3px 3px rgb(98,98,99);
+        }
+        .test01{
+            /* default position property */
+            position:static;
+            left:15px;
+        }
+        .test02{
+            /* shifts from its original position space is created in the document */
+            position:relative;
+            left:50px;
+            top:20px;
+        }
+        .test03{
+            /* changes the position from the parent element > body is the parent, space is not created */
+            background-color:green;
+            position:absolute;
+            top:50px;
+            left:30px;
+        }
+        .test04{
+            /* changes the possition from the parent element > body is the parent */
+            background-color: purple;
+            position: absolute;
+            top:70px;
+            right:30px;
+        }
+        .test05 {
+            background-color: purple;
+            position: relative;
+            top:20px;
+            right:30px;
+        }
+        .test06{
+            background-color: orange;
+            position: absolute;
+            top:20px;
+            left:40ppx;
+        }
+        .parentEl{
+            position:relative;
+            background-color: orange;
+            height: 200px;
+            width:400px;
+        }
+        .childEl{
+            position: absolute;
+            background-color: blue;
+            top: 40px;
+            right: 20px;
+            width: 180px;
+            color: white;
+        }
+        .ptfixed{
+            background-color:chocolate;
+            position:fixed;
+            top: 45px;
+            /* 
+            scroll, it will be always visible at its position 
+            top:45px */
+        }
+        .ptsticky{
+            background-color:rgb(204,12,117);
+            position:sticky;
+            top: 15px;
+            /* it is at it own position in the begining
+            scrill > top15px or more than 15px
+            more than 15px it will stay its own position
+            >top 15px, it behaves like fixed */
+        }
+
+    </style>
+</head>
+<body>
+    <p class="test01">Lorem ipsum dolor sit amet consecteur adipisicing</p>
+    <p class="test01">Lorem ipsum dolor sit amet consecteur adipisicing</p>
+    <!-- relative  -->
+    <hr>
+    <p class="test02">Lorem ipsum dolor sit amet consecteur adipisicing</p>
+    <p class="test02">Lorem ipsum dolor sit amet consecteur adipisicing</p>
+    <hr>
+    <p class="test03">Lorem ipsum dolor sit amet consecteur adipisicing</p>
+    <p class="test04">Lorem ipsum dolor sit amet consecteur adipisicing</p>
+    <p class="test05"> position:relative top:20px;right:30px;</p>
+    <p class="test06"> position:absolute;top:20px;left:40ppx;</p>
+    <hr>
+    <div class="parentEl"><p class="childEl">Child paragraph</p></div>
+    <hr>
+    <p class="ptfixed">Lorem ipsum dolor sit</p>
+    <p class="ptsticky">Lorem ipsum dolor sit</p>
+    <hr>
+    <p style="margin-top:2000px;"></p>
+</body>
+</html>

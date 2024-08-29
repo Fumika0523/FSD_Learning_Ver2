@@ -1,0 +1,17 @@
+NETFLIFY: Deploying the front-end
+
+Step1: Add new Site
+Step2: Import an existing project
+Step3: GitHub and select the project
+Step4:in Build command, enter " CI=false npm run build "
+Publish directory : "dist" 
+Step5: Deploy your project
+Step6: Site configuration >>> Change site name
+Step7: Check on Site overview and copy the URL and paste it to GitHub
+Step8:Click the setting icon next About on the project and paste the url to Website URL.
+
+
+
+
+Site name
+counter-app-23

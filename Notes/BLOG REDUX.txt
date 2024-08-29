@@ -1,0 +1,7 @@
+>>BLOG REDUX
+-ADD BLOOG > ACTION.PAYLOAD
+-CLEAR ALL THE BLOG > removeItem:
+-when you dispatch the action, Redux devtools of the chrome, it has to be added here, serving as store
+
+Create Application - installation: react, dom, router, redux(1:toolkit,2:react)
+Component(addBlog > BlogPage,NavBar) & Utils folder(store.js,blogSlice,), 

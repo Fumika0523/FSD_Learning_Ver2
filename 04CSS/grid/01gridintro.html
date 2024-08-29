@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            background-color: peru;
+            width: 25%;
+            display: grid;
+            /* mentioned how many cols and width */
+            grid-template-columns: 160px 160px 160px;
+            /* mentioned how many row and height */
+            grid-template-rows:160px 160px;
+        }
+        .child{
+            border:4px solid red;
+            background-color:brown;
+            height: 160px;
+            width: 160px;
+            margin-bottom: 1%;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+</html>

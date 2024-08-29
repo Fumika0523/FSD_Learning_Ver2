@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .child{
+            background-color: blue;
+            height: 50px;
+            width: 15%;
+            margin: 1%;
+            text-align: center;
+            font-size: 45px;
+            color: black;
+            align-content: center;
+        }
+        .parent{
+            /* align itself row wise */
+            display: flex;
+            flex-direction: row;
+            width: 25%;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .child1{
+            background-color: brown;
+            order: 1;
+        }
+
+        .child2{
+            background-color: green;
+            order: 2;
+        }
+
+        .child5{
+            background: aqua;
+            order: 3;
+        }
+
+        .child4{
+            background-color: pink;
+            order:4;
+        }
+
+        .child6{
+            background-color: grey;
+            order: 4;
+        }
+
+        .child3{
+            background-color: red;
+            order: 6;
+        }
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child child1">1</div>
+        <div class="child child2">2</div>
+        <div class="child child3">3</div>
+        <div class="child child4">4</div>
+        <div class="child child5">5</div>
+        <div class="child child6">6</div>
+    </div>
+</body>
+</html>

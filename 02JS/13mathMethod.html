@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//math method
+//Math.pow(num,times)
+console.log(Math.pow(4,5))
+console.log(4*4*4*4*4)
+
+//4 * 10
+console.log(Math.pow(4,10))
+
+let num1=6;
+let times=6;
+console.log(Math.pow(num1,times))
+
+//square root of a number
+console.log(Math.sqrt(49))//7
+console.log(Math.sqrt(9))//3
+console.log(Math.sqrt(64))//8
+console.log(Math.sqrt(3))//1.732.....
+
+//calculate the sart of
+console.log(Math.sqrt(-1))
+console.log(Math.sqrt(0))
+console.log(Math.sqrt(-0))
+console.log(Math.sqrt(1))
+console.log(Math.sqrt(2))
+console.log(Math.sqrt(Infinity))
+
+// calculate the hypotenuse
+//a and b = 3, 4
+//sqrt(a*a+b*b)
+
+console.log(Math.sqrt(Math.pow(3,2)+Math.pow(4,2)))
+
+// a and b > 5, 12
+
+console.log(Math.sqrt(Math.pow(5,2)+Math.pow(12,2)))
+
+//Math.pow
+//7 3
+//4 0.5
+//7,-2
+//-7,0.5
+//2,10
+
+console.log(Math.pow(7,3))//343
+console.log(Math.pow(4,0.5))//2
+console.log(Math.pow(7,-2))//0.02
+console.log(Math.pow(-7,0.5))///Nan--number
+console.log(Math.pow(2,10))//1024
+
+//Math.cbrt > 3*3*3 >
+//3*3*3 > 27 >3
+//4*4*4>64>4
+
+//Find the cube root of 27 //3
+console.log(Math.cbrt(27))//3
+console.log(Math.cbrt(64))//4
+console.log(Math.cbrt(1))//1
+
+// Find the cube root of 729 > 9
+console.log(Math.cbrt(729))
+
+// -1
+console.log(Math.cbrt(-1))
+//-0
+console.log(Math.cbrt(-0))
+//0
+console.log(Math.cbrt(0))
+//1
+console.log(Math.cbrt(1))
+//2
+console.log(Math.cbrt(2))
+//Infinity
+console.log(Math.cbrt(Infinity))
+//512
+console.log(Math.cbrt(512))
+
+//8,2 > Math.pow >output > cbrt > output > sqrt
+
+var powNum=(Math.pow(8,2))
+console.log(Math.sqrt(Math.cbrt(powNum)))
+
+//boolean 
+        // true > 1
+        // false > 0
+
+console.log(Math.cbrt(true))//1 1*1*1 >1
+console.log(Math.cbrt(true))//0 0*0*0 >0
+
+console.log(Math.sqrt(true))//1 > 1*1 >1
+console.log(Math.sqrt(true))//0 > 0*0 >0
+
+// For String
+console.log(Math.cbrt(true))//9
+console.log(Math.cbrt(true))//NaN
+
+//Math.pow 
+console.log(Math.pow(true,false))
+console.log(Math.pow(false,true))
+console.log(Math.pow(true,true))
+console.log(Math.pow(false,false))
+
+console.log(Math.pow(1,0))//1
+console.log(Math.pow(0,0))//1
+console.log(Math.pow(1,1))//1
+console.log(Math.pow(0,1))//0
+
+//>ParseInt --> Converting into a integer
+//encounter the num > perform addition
+
+console.log("2"+"2")
+console.log(2+2)
+
+console.log(typeof("2"))
+console.log(typeof(parseInt("2")))
+
+console.log(parseInt("2")+parseInt("2"))
+//"2">2
+//"2">2
+//2+2=4
+
+let a= "89"
+let b= "75"
+console.log(a+b)///concat
+
+//addition > parseInt
+console.log(parseInt(a)+parseInt(b))////164
+
+let c="89a"
+let d="75b"
+console.log(parseInt(c)+parseInt(d))//164
+
+let e="a89"
+let f="b75"
+console.log(parseInt(e)+parseInt(f))//Nan
+
+//with space (begining)
+let g=" 89"
+let h=" 75"
+console.log(parseInt(g)+parseInt(h))//164
+
+//space in between --> the space wont be ignored
+
+let i="8 9"
+let j="7 5"
+console.log(parseInt(i)+parseInt(j)) //15
+
+//if it enncounters is between string, it will ignore
+
+let i1="8a9"
+let j1="7b5"
+console.log(parseInt(i1)+parseInt(j1)) //15
+
+
+//it encounters the string so it ignores the rest
+let i2="a8b9d"
+let j2="b7cd"
+console.log(parseInt(i2)+parseInt(j2))
+
+
+//
+let i3="89jkj0"
+let j3="787hjh56"
+console.log(parseInt(i3)+parseInt(j3))//876
+
+let i4="654rt"
+let j4="908u"
+let k4="78 8967yu"
+console.log(parseInt(i4)+parseInt(j4)+parseInt(k4))//1640
+
+let i5="5678ab889"
+let j5="89898dfdf"
+let k5="tyty7878"//Naan
+let l5="787ghgh565"//Naan
+
+console.log(parseInt(i5)+parseInt(j5)+parseInt(k5)+parseInt(l5))
+
+//decimal values are also excluded
+
+let i6="1.5"
+let j6="8.9"
+
+console.log(parseInt(i6)+parseInt(j6))//9
+
+//is 1.5 is not integer: 1.5 > 1
+//An integer is a whole number (not a fractional number) that can be positive, negative, or zero.
+//1.5 is decimal number
+//decimals are one of the types of numbers, which has a whole number and the fractional part separated by a decimal point.
+
+//---> perseFloat()
+//decimal values are known as float values
+console.log(1.5+1.8)
+console.log(perseInt(1.5)+perseInt(1.8))//1+1=>2
+console.log(perseFloat(1.5)+paseFloat(1.8))//3.3
+
+console.log(parseFloat("1.5")+parseFloat("1.8"))//--->able to convert? --> becasue its parse
+
+//
+let a1="89"
+let b1="75"
+console.log(parseFloat(a1)+parseFloat(b1))//164
+
+
+let c1="89.5a"
+let d1="75.5b"
+console.log(parseFloat(c1)+parseFloat(d1))//165
+
+let e1="s89.5a"
+let f1="c75.5b"
+console.log(parseFloat(e1)+parseFloat(f1))//NAN
+
+let g1="89.5"
+let h1="75.5"
+console.log(parseFloat(g1)+parseFloat(h1))//165
+
+//let i1="8a9"
+//let j1="7b5"
+//console.log(parseFloat(i1)+parseFloat(j1))//15
+
+//let e11="8.5a9"
+//let f11="7.3b5"
+//console.log(parseFloat(e11)+parseFloat(f11))15.8
+
+let g11="a8c9d"
+let h11="b7cb5d"
+console.log(parseFloat(g11)+parseFloat(h11))NAN
+
+//parseInt() -> only integer
+//parseFloat() -->integer and decimal (Float)
+rest all is same for parseInt and parseFloat
+
+let i2="6.7"
+let j2="6"
+console.log(parseFloat(i2)+parseFloat(j2))//12.7
+console.log(parseInt(i2)+parseInt(j2))//12
+
+//PI=3.14 = Math.PI
+//circumference of circle=2*PI*r
+//area of circle -- formula
+
+console.log(Math.PI*5*5)//78.53981633974483
+
+//Math.pow
+console.log(Math.pow(5,2)*Math.PI)78.53981633974483
+//console.log(Math.PI*Math.pow(5,2))
+
+Math.ceil()
+//top > up > roundsup
+console.log(Math.ceil(0.3))//1
+console.log(Math.ceil(0.6))//1
+console.log(Math.ceil(27.3))//28
+console.log(Math.ceil(27.6))//28
+console.log(Math.ceil(27.1))//28
+
+//practice
+console.log(Math.ceil(0.95))
+console.log(Math.ceil(4))
+console.log(Math.ceil(7.004))
+console.log(Math.ceil(-7.004))
+console.log(Math.ceil(Infinity))
+console.log(Math.ceil(-4))
+console.log(Math.ceil(-0.95))
+console.log(Math.ceil(-0))
+console.log(Math.ceil(0))
+console.log(Math.ceil(0.95))
+console.log(Math.ceil(4))
+console.log(Math.ceil(Infinity))
+
+//r=4.6 > math.ceil
+
+//calculate circumference of a circle
+console.log(2*Math.PI*4.6)//28.902652413026093
+
+//calculate area of circle
+console.log(Math.PI*Math.pow(4.6,2))
+
+var r=Math.ceil(4.6)
+console.log(2*Math.PI*r)
+
+console.log(Math.PI*Math.pow(r,2))
+
+Math.floor()
+// bottom > down > rounddown
+console.log(Math.floor(5.9))//5
+console.log(Math.floor(28.2))//28
+console.log(Math.floor(28.6))//28
+console.log(Math.floor(57.4))//57
+console.log(Math.floor(28))//28
+
+//
+console.log(Math.floor(0.95))
+console.log(Math.floor(4))
+console.log(Math.floor(7.004))
+console.log(Math.floor(-7.004))
+console.log(Math.floor(Infinity))
+console.log(Math.floor(-4))
+console.log(Math.floor(-.095))
+console.log(Math.floor(-0))
+console.log(Math.floor(0))
+console.log(Math.floor(0.95))
+console.log(Math.floor(4))
+console.log(Math.floor(Infinity))
+
+
+//calculate area of circle
+
+var r=Math.floor(4.6)
+
+console.log(2*Math.PI*r)//circumfrence of circle
+console.log(Math.PI*Math.pow(r,2))//are of cir
+
+//var r=Math.floor(4.6)
+console.log(2*Math.ceil(Math.PI)*(Math.floor(4.6)))
+console.log(Math.ceil(Math.PI)*Math.pow(Math.floor(4.6),2))
+
+//5
+//Math.pow > time:4
+// sqrt(a*a + b*b)
+//sqrt > cbrt . Math.floor > area >Math.ceil
+
+let a=Math.pow(5,4)
+let sqrtAn=Math.sqrt(a)
+
+let cbrtAn=(Math.floor((Math.cbrt(sqrtAn)))
+console.log=Math.ceil(2*Math.PI*a)
+
+//calculate area of circle
+console.log(Math.PI*Math.pow(4.6,2))
+
+let val=Math.pow(5,4);console.log(val)
+let sqrt=Math.sqrt(val);console.log(sqrt)
+let cbrt=Math.cbrt(sqrt);console.log(cbrt)
+let floor=Math.floor(cbrt);console.log(floor)
+let area=(2*Math.PI*Math.pow(floor,2));console.log(area)
+let ceil=Math.ceil(area);console.log(ceil)
+
+//
+
+let r=Math.floor(Math.cbrt(Math.sqrt(Math.pow(5,4))))////2
+let area1=2*Math.PI*Math.pow(r,2)
+console.log(Math.ceil(area1))
+
+//function
+
+function calArea(x){
+let r=Math.floor(Math.cbrt(Math.sqrt(Math.pow(x,4))))////2
+let area1=2*Math.PI*Math.pow(r,2)
+console.log(Math.ceil(area1))
+}
+calArea(5)
+
+
+//area of circle -- r+5
+//console.log(Math.PI*Math.pow(r,2))
+//area
+
+function areaAn(y){
+ 
+console.log(Math.PI*Math.pow(y,2))
+}
+areaAn(5)
+
+
+// circumference
+function cirAn(z){
+ 
+console.log(2*Math.PI*z)
+
+}
+cirAn(5)
+
+
+
+
+</script>
+</body>
+</html>

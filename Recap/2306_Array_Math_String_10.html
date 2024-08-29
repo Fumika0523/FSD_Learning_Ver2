@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Math.random()</h2>
+    <p>Math.random() returns a random number between 0 (included) and 1 (excluded):</p>
+    <p id="demo"></p>
+    <script>document.getElementById("demo").innerHTML=Math.random()</script>
+
+    <p>Math.floor(Math.random()*10) returns a random integer between 0 and 9 (both included)</p>
+    <p id="demo1"></p>
+    <script>document.getElementById("demo1").innerHTML=Math.floor(Math.random()*10) //dicimal value is removed so only random number between 0-9</script>
+    <hr>
+    <h2>parseInt()</h2>
+    <p>parseInt() parses a string and returns the first integer</p>
+    <p id="demo2"></p>
+    <script>
+    document.getElementById("demo2").innerHTML=parseInt("10")+"<br>"+parseInt("10.00") + "<br>" +
+        parseInt("10.33") + "<br>" +
+        parseInt("34 45 66") + "<br>" +
+        parseInt("   60   ") + "<br>" +
+        parseInt("40 years") + "<br>" +
+        parseInt("He was 40");
+    </script>
+    <hr>
+    <h2>parseFloat()</h2>
+    <p>parseFloat() parses a string and returns he first number:</p>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo3").innerHTML=parseFloat(10) + "<br>" +
+        parseFloat("10") + "<br>" +
+        parseFloat("10.33") + "<br>" +
+        parseFloat("34 45 66") + "<br>" +
+        parseFloat("He was 40");
+    </script>
+    <hr>
+    <h2>array.reverse()</h2>
+    <p id="demo4"></p>
+    <p>The reverse() method reverses the order of the elements in an array.</p>
+    <script>
+        let array = ["Apple","monkey","banana","wild"]
+        document.getElementById("demo4").innerHTML=array.reverse()
+    </script>
+    <hr>
+    <h2>array.concat()</h2>
+    <p>The concat() method concatenates (joins) two or more arrays:</p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        const arr1 = ["Cecilie", "Lone"];
+        const arr2 = ["Emil", "Tobias", "Linus"];
+         let arr3 = ["Apple","monkey","banana","wild"]
+        const children = arr1.concat(arr2); 
+        document.getElementById("demo5").innerHTML = children;
+
+        const random = arr1.concat(arr2,arr3)
+        document.getElementById("demo6").innerHTML=random;
+    </script>
+    <hr>
+    <h2>array.join()</h2>
+    <p id="demo7"></p>
+    <p>join() returns an array as a string:</p>
+    <script>
+        const name=arr2.join();
+        document.getElementById("demo7").innerHTML=name;
+    </script>
+    <hr>
+    <h2>array.reduce()</h2>
+    <p>Substract the numbers in the array, starting from the left.</p>
+    <p id="demo8"</p>
+    <script></script>
+    <hr>
+    <h2>array.filter()</h2>
+    <script></script>
+    <hr>
+    <h2>array.map()</h2>
+    <script></script>
+    <hr>
+    <h2>repeat()</h2>
+    <script></script>
+    <hr>
+    <h2>toLowerCase()</h2>
+    <script></script>
+    <hr>
+    <h2>toUpperCase()</h2>
+    <script></script>
+    <hr>
+    <h2>split()</h2>
+    <script></script>
+    <hr>
+    <h2>concat()</h2>
+    <script></script>
+    <hr>
+    <h2>/endWith()</h2>
+    <script></script>
+    <hr>
+    <h2>slice()</h2>
+    <script></script>
+    <hr>
+    <h2>substring()</h2>
+    <script></script>
+</body>
+</html>

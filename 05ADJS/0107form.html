@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- <form onsubmit="myForm(event)" > -->
+    <form>
+    <input type="text" placeholder="Name" id="username">
+    <span id="usernameError"></span><br><br>
+
+    <input type="text" placeholder="Subject" id="subject">
+    <span id="subjectError"></span><br><br>
+
+    <textarea name="inquiry" id="inquiry" placeholder="Your inquery"></textarea>
+    <span id="inquiryError"></span><br><br>
+    <button type="submit" value="Submit">Submit</button>
+    <!--<input type="submit" value="Submit"> -->
+  </form>
+  <script>
+    function myForm(event){
+        event.preventDefault()
+        let usernameForm=document.getElementById("username").value
+        let subjectForm=document.getElementById("subject").value
+        let inquiryForm=document.getElementById("inquiry").value
+
+        let usernameError=document.getElementById("usernameError")
+        let subjectError=document.getElementById("subjectError")
+        let inquiryError=document.getElementById("inquiryError")
+
+        console.log(usernameForm,subjectForm)
+
+        if(usernameForm.length==0){
+            console.log("username should not be empty")
+            usernameError.innerText="username shouldnt be empty"
+            usernameError.style.color="red"
+        }
+        else if(usernameForm.length<5){
+            console.log("username must b more tha 5 characters")
+            username.innerText="username must b more than 5 letters"
+            usernameError.style.color="red"
+        }
+        if(subjectForm.length==0){
+            subjectError.innerHTML="subject shouldnt be empty"
+        }
+        // else of(subjectForm.length<5){
+        // subjectError.innerHTML="subject is too short"
+        // }
+        if(inquiryForm.length==0){
+            inquiryError.innerHTML="inquiry is too short"
+        }
+    }
+    //
+  </script>
+</body>
+</html>

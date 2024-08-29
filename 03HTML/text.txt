@@ -1,0 +1,15 @@
+File creation
+javascript > filename.javascript
+html       >filename.html
+
+When you create any project
+html filenamescript filename
+css filename
+
+HTML  > HYPERTEXT MARKUP LANGUAGE
+      >defined structure
+      >create a webpage
+      >create a statix webpage/web application
+
+
+      Coding means "logic"

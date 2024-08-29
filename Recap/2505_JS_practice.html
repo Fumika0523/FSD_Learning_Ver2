@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        background-color: purple;
+        height: 150px;
+        width: 200px;
+    }
+    button{
+        background-color: orange;
+        color:white;
+        font-weight: bold;
+        margin-top: 1%;
+        margin-left: 4%;
+        padding: 6px 10px;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div id="onclickDemo1"></div>
+    <button id="onclickDemo" onclick="test()">Change Colour</button>
+
+    <script>
+    //1 div, 1 button,
+    //when you click the button, background colour should change
+    let arr=["pink","orange","yellow","green","blue","black","red"]
+    function test(){
+    var test100=(Math.floor(Math.random()*arr.length))
+    console.log(arr[test100])
+    let divTag=document.getElementById("onclickDemo1")
+    divTag.style.backgroundColor=(arr[test100])
+    }
+
+ 
+    
+    </script>
+</body>
+</html>

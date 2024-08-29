@@ -1,0 +1,6 @@
+wherever a button is pressed, 
+the action is dispatched, the action calls up the reducer function, the reducer function is responsible for the update store 
+
+
+when we want the data from redux store,
+we have to subscribe the store, and by using useSelector() we can subscribe the store and fetch the data and update in the UI

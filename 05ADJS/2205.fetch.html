@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let req1=fetch(`https://restcountries.com/v3.1/all`)
+        req1.then((value)=>value.json())
+        .then((res)=>{
+            console.log(res)
+        for(var i=0;i<=res.length;i++){
+            console.log(res[i]?.flags?.png)
+            let imageTag=document.createElement(`img`)
+            imageTag.setAttribute(`src`,res[i]?.flags?.png)
+            let h6Tag=document.createElement(`h6`)
+            h6Tag.innerHTML=res[i]?.name?.common
+            document.body.append(imageTag,h6Tag)
+        }
+        })
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //calculate the total 5subjects, 
+        //percentage of  the student,
+        //promise 
+        //30 > fail
+        //40 > third class
+        //60 > second class
+        //80 > first class
+
+        let mathScore=parseInt(prompt("What is your Math score?"))
+        console.log(`Your Math score is ${mathScore}`)
+        let englishScore=parseInt(prompt("What is your English score?"))
+        console.log(`Your English score is ${englishScore}`)
+        let peScore=parseInt(prompt("What is your P.E score?"))
+        console.log(`Your P.E score is ${peScore}`)
+        let historyScore=parseInt(prompt("What is your history score?"))
+        console.log(`Your History score is ${historyScore}`)
+        let scienceScore=parseInt(prompt("What is your science score?"))
+        console.log(`Your science score is ${scienceScore}`)
+
+      function totalScore(a,b,c,d,e){
+            console.log(a+b+c+d+e)
+            console.log("Your Total score is",a+b+c+d+e)
+            return (a+b+c+d+e)
+        }
+       var total=totalScore(mathScore,englishScore,peScore,historyScore,scienceScore)
+
+        //console.log("Your total score is", mathScore+englishScore+peScore+historyScore+scienceScore)//you shouldnt put in literal template.> same with line31
+
+        //percentage of  the student,
+
+        let percentage=function (x){
+            return (x/500)*100
+        }
+        var per=percentage(total)
+        console.log(per)
+
+          //promise 
+        //30 > fail
+        //40 > third class
+        //60 > second class
+        //80 > first class
+//////FIX
+    let p=new Promise((resolve,reject)=>{
+        if(per>80){
+            resolve("You are in 1st class!")
+            let divTag=document.createElement(`div`)
+            divTag.innerText=`You are in 1st class`
+            document.body.append(divTag)
+            divTag.style.color="green"
+            divTag.style.fontSize="20px"
+        }
+        else if(per>60){
+            resolve("You are in 2nd class")
+            let divTag1=document.createElement(`div`)
+            divTag1.innerText=`You are in 2nd class`
+            document.body.append(divTag1)
+            divTag1.style.color="blue"
+        }
+        else if(per>40){
+            resolve("You are in 3rd class")
+            let divTag2=document.createElement(`div`)
+            divTag2.innerText=`You are in 3rd class`
+            document.body.append(divTag2)
+            divTag2.style.color="orange"
+        }
+        else if(per>30){
+            resolve("you are in 4th class")
+            let divTag3=document.createElement(`div`)
+            divTag3.innerText=`You are in 4th class`
+            document.body.append(divTag3)
+            divTag3.style.color="yellow"
+            divTag3.style.backgroundColor="navy"
+        }
+        else{
+           reject("You are failed")
+           let divTag4=document.createElement(`div`)
+            divTag4.innerText=`You are failed`
+            document.body.append(divTag4)
+            divTag4.style.color="red"
+        }
+    })
+    console.log(p)
+
+    // p.then((value)=>console.log(value)).catch((error)=>console.log(error)) 
+    // Promise.all([p1,p2,p3]).then((value)=>console.log(value)).catch((error)=>console.log(error))
+
+    </script>
+
+</body>
+</html>

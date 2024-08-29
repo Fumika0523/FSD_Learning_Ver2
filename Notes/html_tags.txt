@@ -1,0 +1,130 @@
+>Display
+- Block Element: entire
+- Inline Element: only content
+
+>Heading Tag
+<h1></h1>---> Biggest font
+<h2></h2>
+....<h6></h6> ---> Smallest font
+>Bold Text
+>Top and Bottom,  there is a space
+> -text > occupies the entire width of the page || next line
+>display:block
+
+>Paragraph Tag
+<p></p>
+>Normal font --> Not bold
+>Top and Bottom, there is a space
+> -text > occupies the entire width of the page || next line
+>display: block
+
+>Anchor Tag
+<a></a>
+attribute gives additional information about that tag attributename="attributevalue"
+2 attributes
+1.href="url"hypereference link
+2.target="_blank" >opening the new tab on browser
+3."./filename"--> link to the other html file
+>Properties associated with hyperlink  > bluecolour underline+ text also blue colour
+>No space top and bottom
+>Doesnt occupy entire width
+>Cursor changes > pointer cursor
+>Takes to hyperreference link
+>display: inline
+
+
+>image tag 
+<img>
+4:attribute
+1.src="url"
+2.alt="referencename"
+3.height="number"
+4.width="number"
+> self closing tag
+
+<span></span>
+>display:inline --> No other property
+
+<div></div>
+>display:block --> No other property
+>it acts like a wrapper
+>put the different set of elements together
+
+<section></section>
+>display:block --> No other property
+>it acts like a wrapper
+>put the similar set of elements together
+
+<mark></mark>
+>highlight the text in yellow colour
+>inline element --> No other property
+
+<hr/>
+>horizontal row
+>gives you horizontal line in the entire page
+>display: block
+
+<br/>
+>break the line
+>it takes to the next line
+>only for quick fix
+
+<i></i> -->inline element
+>gives the text in italistic font
+
+<u></u> -->inline element
+>gives the underline in text
+
+<b></b> -->inline element
+>gives the bold font in text
+
+<sub></sub> -->inline element
+>gives you subscript, add to base
+
+<s></s> -->inline element
+>strike out the text
+
+<input type="radio" name="gender" id="female">
+<label for="female">Female</label> 
+--> radio button, you can select only 1 even if you put many of them
+--> inline element
+
+<label for="car">Car</label>
+<input type="checkbox" name="vehicle" id="car">
+--> check box, you can check as many as you want
+--> inline element
+
+All the input elements are INLINE elements
+
+<select>
+--> inline element
+select from below options > bind => label-->
+ex:
+<label for="countries">Choose a Country</label>
+<select id="countries">
+    <option value ="usa">USA</option>
+
+<ul></ul> unorderedlist > bullets .... wrapper >type : disc, circle, square
+<ol></ol> orderedlist   > numerics ... wraper > type="A" start="6" , you can start from any number
+
+ >>>listitem>>>  <li></li>
+
+<table></table> --> you have to put the content inside this tags
+<thead>
+    <tr>
+        <th>    <th> --> TH because its a heading
+    <tr>
+</thead> ---> 1st row
+
+<tbody>
+    <tr>
+        <td>    <td> --> TD because its a body
+    <tr>
+</tbody> ---> 1st row
+
+
+<iframe width="" height="" src=""></iframe>--> example> youtube video --> copy embedded code
+
+
+
+

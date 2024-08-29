@@ -1,0 +1,18 @@
+XMLHttpRequest()
+Promise(()=>{})
+Fetch
+ //let p=new Promise(()=>{})
+             console.log(p)
+
+             let p1=new Promise((resolve,reject)=>{
+                resolve(`Yes`)
+             })
+             console.log(p1)
+             p1.then((value)=>console.log(value))
+
+             let p2=new Promise((resolve,reject)=>{
+                reject(`No`)
+             })
+             console.log(p2)
+             p2.catch((error)=>console.log(error))
+

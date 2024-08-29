@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .divDesign{
+    background-color: orange;
+    height: 100px;
+    width: 100px;
+    }
+    </style>
+</head>
+<button onclick="stop()">Stop This</button>
+<body>
+    <div class="divDesign" id="div1">Hello</div>
+    <script>
+        // after 5 sec change to red, width >200px
+    let test=setTimeout(()=>{
+        let divTest=document.getElementById("div1")
+        // document.body.append(divTest)
+        // divTest.innerHTML="Hello"
+        divTest.style.backgroundColor="red"
+        divTest.innerHTML="Hello"
+        divTest.style.width="200px";
+        divTest.style.fontSize="40px";
+        divTest.style.alignContent="center";
+        divTest.style.textAlign="center";
+        // console.log(divTest)
+    },5000)
+
+  //click button > set animation has been stopped > show in browser
+    function stop(){
+        console.log("Set animation has been stopped")
+        let divTest1=document.createElement("div")
+        divTest1.innerHTML="Set animation has been stopped"
+        divTest1.style.fontSize="40px";
+        divTest1.style.color="purple";
+        document.body.append(divTest1)
+        clearTimeout(test)
+    }
+    </script>
+</body>
+</html>

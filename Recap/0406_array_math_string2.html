@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <h2>Math.floor() Method</h2>
+   <p>Maty.floor() rounds a number DOWN to the newarest integer:</p>
+   <p id="test1"></p>
+   <p id="demo"></p>
+    <script>
+        let x=Math.floor(1.6)
+        document.getElementById("test1").innerHTML=`Math.floor(1.6): ${x}`;
+
+        let a = Math.floor(0.60);
+        let b = Math.floor(0.40);
+        let c = Math.floor(5);
+        let d = Math.floor(5.1);
+        let e = Math.floor(-5.1);
+        let f = Math.floor(-5.9);
+
+        document.getElementById("demo").innerHTML = `Other examples are: Math.floor(0.60):${a}, Math.floor(0.40):${b},Math.floor(5):${c},Math.floor(5.1):${d},Math.floor(-5.1):${e},Math.floor(-5.9):${f}`
+    </script>
+    <hr>
+     <h2>array.pop() Method</h2>
+     <p>pop() removes the last element of an array.</p>
+     <p id="test2"></p>
+     <p id="test4"></p>
+     <p id="demo2"></p>
+     <p id="demo3"></p>
+     <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("test2").innerHTML = `This is before using pop() Method: ${fruits}`;
+        fruits.pop();
+        document.getElementById("test4").innerHTML= `This is after pop() Method: ${fruits}`
+        const country = ["Italy", "France", "UK", "Japan"];
+        document.getElementById("demo2").innerHTML =`The counties are: ${country}, but after using pop() method, it will show only:`;
+        country.pop();
+        document.getElementById("demo3").innerHTML=`${country}`
+     </script>
+    <hr>
+    <h2>match() Method</h2>
+    <p>match() searched for a match in a string</p>
+    <p>Do a search for "mika"</p>
+    <p id="test3"></p>
+    <script>
+        let text="Fumika went to school today by train."
+        let result=text.match("mika")
+        document.getElementById("test3").innerHTML=`"${result}" matches in the next text. "${text}"`
+</script>
+
+
+ 
+</body>
+</html>

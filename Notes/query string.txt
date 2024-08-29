@@ -1,0 +1,74 @@
+Options: you need to put this to the URL in Postman
+it is coming from req.query, its about query string
+req.query is object
+
+
+?fumika=nodejs <<<< 
+console.log(req.query.fumika)
+
+?limit=5
+console.log(req.query.limit)
+
+?skip=10
+console.log(req.query.skip)
+
+?completed=true
+console.log(req.query.completed)
+
+?completed=false
+console.log(req.query.completed)
+
+http://localhost:8002/task?completed=true&limit=2&skip=7
+
+VSCODE:
+ex)
+try{
+	if(req.query.completed){		<<< only filter about true || false will taken care of ..
+	match.completed=req.query.completed=="true"
+	}
+	const getUser = await req.user.populate({
+	path:"taskRel",
+	match:match,	
+	options:{
+	limit:parseInt(req.query.limit),
+	skip:parseInt(req.user.skip)	
+	}
+
+})
+
+POSTMAN:
+1. limit >> limit the number of response
+ex) ?limit = 5 (when you want to show only 5 responses)
+
+2. Skip >> Skip the beginning of response
+ex) ?skip=5 (skipping the first 5 responses
+
+3.match >>> match is taking an object >> mongodb agg method >>  true || Boolean -- it'll automatically understand it has to be false
+
+task?completed=true
+task?completed=false
+
+combination of two:
+task?completed=true&limit=5 <<< 5 completed task will show
+
+task?completed=false&limit=5 <<< 5 task that is not completed will show
+
+task?completed=true&skip=5 <<<< completed task will show but first 5 tasks will be skipped
+
+task?completed=false&skip=5 <<< not completed task will show but first 5 tasks will be skipped
+
+task?limit=5&skip=3  << showing only 5 tasks but first 3 tasks will be skipped
+
+combination of three:
+task?completed=true&limit=15&skip=5  <<< 15 completed tasks will be shown but
+first 5 tasks will be skipped
+
+task?completed=false&limit=10&skip=2	<< 10 not completed tasks will be shown but first 2 tasks will be skipped 
+
+
+
+
+
+
+
+

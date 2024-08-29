@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="stop()">Stop</button>
+
+    <script>
+        setTimeout(()=>console.log(1),2000)//only once after 2 sec
+        setInterval(()=>console.log(1),2000)//going to perform again after
+    
+        let a=100;
+        let test=setInterval(()=>{
+            a=a+10;
+            console.log(a+"px")
+
+        },2000)
+
+        function stop(){
+            console.log("stopped")
+            clearInterval(test)
+        }
+
+    </script>
+</body>
+</html>

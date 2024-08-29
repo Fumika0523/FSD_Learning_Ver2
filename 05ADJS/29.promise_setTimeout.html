@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p1=new Promise((resolve,reject)=>{
+        if(true){
+            setTimeout(()=>{
+                resolve("Timer Started1")
+            },1000)
+        }else{
+            reject("Timer Rejected")
+        }
+        })
+        //console.log() is missing
+        //console.log(p6)
+        
+        let p2=new Promise((resolve,reject)=>{
+            if(true){
+                setTimeout(()=>{
+                    resolve("Timer Started2")
+                },2000)
+            }else{
+                reject("Timer Rejected")
+            }
+        })
+
+        let p3=new Promise((resolve,reject)=>{
+            if(true){
+                setTimeout(()=>{
+                    resolve("Timer Started3")
+                },3000)
+            }else{
+                reject("Timer Rejected")
+            }
+        })
+
+        p1.then((value)=>console.log(value)).catch((error)=>console.log(p1))
+        p2.then((value)=>console.log(value)).catch((error)=>console.log(p2))
+        p3.then((value)=>console.log(value)).catch((error)=>console.log(p3))
+
+        Promise.all([p1,p2,p3]).then((value)=>console.log(value)).catch((error)=>console.log(error))
+    </script>
+</body>
+</html>

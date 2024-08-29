@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // sync function functioname(){
+           
+        // }
+        // functioname()
+
+        async function test(){
+            let res=await fetch(`https://restcountries.com/v3.1/all`)
+            //string response
+            let data=await res.json()//250 < converting from string to object
+
+            console.log(data)
+            // for(var i=0;i<=data.length;i++){
+            //     console.log(data[i].flags.png)
+            //     let imageTag=document.createElement(`img`)
+            //     imageTag.setAttribute(`src`,data[i].flags.png)
+            //     document.body.append(imageTag)
+            // }
+            //mathMethod
+            data.map((element,index)=>{console.log(`${element.flags.png}`)
+            let imageTag=document.createElement(`img`)
+            imageTag.setAttribute(`src`,element.flags.png)
+            document.body.append(imageTag)}
+            )}//{}
+        test()
+    </script>
+</body>
+</html>

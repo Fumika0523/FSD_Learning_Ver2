@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divDesign{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<div class="divDesign" id="div1">Hello</div>
+<body>
+    <button onclick="stop()">Stop</button>
+    <script>
+        //div > Red + HW
+        // //Width:100||120||130||140
+        
+        let b=100;
+        let test=setInterval(()=>{
+            b=b+20;
+            let divTest=document.getElementById("div1")
+            divTest.style.backgroundColor="blue";
+            divTest.innerHTML="Hello";
+            divTest.style.fontSize="40px";
+            divTest.style.color="white";
+            divTest.style.alignContent="center";
+            divTest.style.textAlign="center";
+            // divTest.style.height="200px";
+            divTest.style.width=b+"px";
+            //console.log("abc")
+        },1000)
+
+        // function stop(){
+        //     console.log("stopped")
+        //     clearInterval(test)
+        //     let divTest1=document.createElement("div")
+        //     divTest1.innerHTML="Stopped!"
+        //     document.body.append(divTest1)
+        // }
+
+    </script>
+</body>
+</html>

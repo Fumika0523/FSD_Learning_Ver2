@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//calculate factorial num
+    let calcufact=function(s){
+    var fact=1
+    for(var i=1;i<=s;i++){
+    fact=fact*i
+    }
+    //console.log(fact)
+    return fact
+}
+let factans3=calcufact(5)
+console.log(factans3)
+
+
+
+
+//arrow factorial num
+
+let factarrw=(x)=>{
+var fact=1
+for(var i=1;i<=x;i++){
+    fact=fact*i
+}
+return fact
+}
+let factans=factarrw(5)
+console.log(factans)
+
+///calculate the sum of array elements 
+
+let calcuarrfun=(v)=>{
+    var sum=0;
+    for(var i=0;i<v.length;i++){
+        sum=sum+v[i]
+    }
+return sum
+}
+let arr=[2,4,5,8,9,10]
+let totalarr=calcuarrfun(arr)
+console.log(totalarr)
+
+
+//
+let calcuarr = function(v){
+var sum=0;
+for(var i=0; i<v.length;i++){
+    sum=sum+v[i]
+}
+return sum
+}
+
+let arr1=[2,4,5,8,9,10]
+let totalarr1=calcuarr(arr1)
+console.log(totalarr1)
+
+
+ </script>
+</body>
+</html>

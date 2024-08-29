@@ -1,0 +1,31 @@
+context API
+-Context you can store a data and need to put in a main component(App.jx) and you can re-use it to other components.
+-1. create a context in utils folder by using createContext().
+-2. use this in App.jsx which is Root Component alongside with useState Variable with a value {[val,setval]}
+ex)
+<contextCreatedName.Provider alue={[val,setVal]}>
+
+</contextCreatedName.Provider>
+
+useContext(), whenever I need the data in the component, you can use it wherever you want to use it.
+ex)
+const stateVariable= useContext(contextCreatedName)
+
+//prop drilling shouldn't be happened
+
+
+Movie' generic statement about movie, replace with Message.
+
+Local state Variable
+useState Variable >> Prop drilling
+
+---------------------------------------------
+
+Wherever a button is pressed 
+An action is dispatched, that action calls up the reducer function and that reducer function is responsible to update the store
+
+
+When we want data from redux store
+We have to subscribe the store, By using useSelector(), we can subscribe the store, fetch the data and update in UI.
+
+

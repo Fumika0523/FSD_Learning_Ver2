@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    var obj={
+        color:"red",
+        car:"honda",
+        location:"Japan",
+        phonenumber:123456789
+    }
+    obj.location="India"
+    obj.age=20
+    delete obj.car;
+    console.log(obj)
+
+    var arr=[1,5,10,"hi",true]
+    console.log(arr)
+    console.log(arr[2])
+    arr[5]="33"
+    arr[3]="hello"
+
+    var arr2=[2,4,6,8]
+  
+    console.log(arr2[0]+arr2[1]+arr2[2]+arr2[3])
+
+    //or
+
+    var sum=0;
+
+    var arr2=[2,4,6,8]
+    for(var i=0;i<arr2.length;i++){
+        //console.log(i)
+        sum=sum+arr2[i]
+    }
+    console.log(sum)
+
+    //var 
+
+    var a=10;
+    console.log(a)
+    var a ="fumika"
+    console.log(a)
+    a = 100; //redeclare
+    console.log(a)
+
+    //let --- Always
+    let b=10;
+    let c=5;
+    console.log(b+c)
+    //let b="fumika"
+    console.log(b+c)
+    b = 500;
+    console.log(b)
+
+
+    const d=1
+    console.log(d)
+    const d="fumika"
+    //console.log(d)
+    //d=444
+    //console.log(d)
+
+    //const
+    
+    //Logical Operator
+    //IF
+
+   </script> 
+</body>
+</html>

@@ -1,0 +1,58 @@
+Create > POST >> AddMovie 
+Read  > GET >> in almost all Components
+Update  >
+Delete  > DELETE >> MovieCard
+
+AddMovie:
+>Created input tags to fill the movie details.
+>Created button tag with onClick to post a new movie postMovies()
+>Created button tag with onClick to navigate you to go back to AllMovie page
+>Created 11 useState variables to update the input tages
+>used useState variables in to the input tags in value attribute and onChange handler(for example: value={movieName} onChange={(e)=>setMovieName(e.target.value)} )
+>postMovies() : created a object using a useState, key name should be the same as API.
+Ive made a API call,using POST method and passing a object in the body in JSON.syringify(newMovie)>calling the getMovies,
+this getMovies is making a API call (line56) to get a all movies data.
+>API output is converted to JSON format using .json() method,
+(line59) updating a movie data with a response of API call  in setMovieData(data).
+>setMovieData is passed from App.jsx to the AddMovie component and AddMovie Component has received the props and used as in the getMovieData(data) function to update the Movies Data.
+
+DELETE: (MovieCard.jsx)
+>Created Delete icon with onClick event to delete the specific Movie data >deleteMovie()
+>Ive made a API call to delete a specific movie data.
+Using DELETE method, API output(string) is converted to JSON format using .json() method(line21). 
+If you get the output(line22), then you are calling the "getMovieData()".
+> getMovieData is doing API call, fetching the all movies data after deleted. 
+>API output is converted to JSON format using .json() method,and updating a movie data with a response of API call in setMovieData(data)
+>setMovieData is passed from App.jsx to  the MovieDisplay component.
+MovieDisaply has received as a prop and passed to MovieCard as prop and MovieCard has received the prop and used in getMovieData(data) (line19) function to update the movie' data.
+
+EDIT: (EditMovie.jsx)
+>Created Edit icon in MovieCard.jsx with onClick event to edit the specific Movie data. navigate(`/editmovie/${id}`)
+>I have made a API call to edit a specific movie data. 
+>First, in EditMovie(), getting the specific Movie data by API call with a specific ID (`https://66760c9da8d2b4d072f24534.mockapi.io/movie/movie/${id}`)
+and pass this data to setSingleMovies(data) to update
+>Create another function called EditMovieForm and showed the specific movie's data in editform so that you can edit.
+After you edit the data in Editform, Using PUT Method,updated the data and sending it to the server by API calling.
+
+
+
+
+
+
+
+
+
+
+
+
+//useEffect --->getMovieData --> When your data is loaded 
+
+
+
+
+
+
+
+
+
+

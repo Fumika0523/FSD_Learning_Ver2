@@ -1,0 +1,37 @@
+In MongoDB, the aggregation pipeline consists of stages and each stage transforms the document. Or in other words, the aggregation pipeline is a multi-stage pipeline, so in each state, the documents taken as input and produce the resultant set of documents now in the next stage(id available) the resultant documents taken as input and produce output, this process is going on till the last stage. The basic pipeline stages provide filters that will perform like queries and the document transformation modifies the resultant document and the other pipeline provides tools for grouping and sorting documents. You can also use the aggregation pipeline in sharded collection.
+
+Let us discuss the aggregation pipeline with the help of an example:
+
+In the above example of a collection of train fares in the first stage. Here, the $match stage filters the documents by the value in class field i.e. class: “first-class” and passes the document to the second stage. In the Second Stage, the $group stage groups the documents by the id field to calculate the sum of fare for each unique id. 
+
+Here, the aggregate() function is used to perform aggregation it can have three operators stages, expression and accumulator.
+
+
+
+Stages: Each stage starts from stage operators which are:
+
+$match: It is used for filtering the documents can reduce the amount of documents that are given as input to the next stage.
+$project: It is used to select some specific fields from a collection.
+$group: It is used to group documents based on some value.
+$sort: It is used to sort the document that is rearranging them
+$skip: It is used to skip n number of documents and passes the remaining documents
+$limit: It is used to pass first n number of documents thus limiting them.
+
+Expressions: It refers to the name of the field in input documents for e.g. { $group : { _id : “$id“, total:{$sum:”$fare“}}} here $id and $fare are expressions.
+
+Accumulators: These are basically used in the group stage
+
+sum: It sums numeric values for the documents in each group
+count: It counts total numbers of documents
+avg: It calculates the average of all given values from all documents
+min: It gets the minimum value from all the documents
+max: It gets the maximum value from all the documents
+Note:
+
+in $group _id is Mandatory field
+$sum:1 will count the number of documents and $sum:”$fare” will give the sum of total fare generated per id.
+
+
+
+
+

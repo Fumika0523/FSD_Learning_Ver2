@@ -1,0 +1,62 @@
+Login to MongoDB Atlas using Google Account.
+Fill up the basic details and select "Free Cluster(M0)" >> Free only for learning and development purpose
+
+Create Database Access/User
+1.Click "Database Access"
+2.Click "Add New Database User"
+3.Authentication Method: "Password"
+4.Create Username and Password
+5.Click "Add Build In Role" and select "Read and Write to any database"
+6.Click "Add User"
+
+NetWork Access
+1.Click "Add IP Address"
+2.Select "Allow Access from Anywhere"
+3.Wait until the Status shows "Active"
+
+Database
+Id: fumika0523
+Password:Apple2021
+
+1.Click "Connect" next to Cluster0
+2.Select "MongoDB for VS Code"
+mongodb+srv://fumika0523:<password>@cluster0.jjh1i.mongodb.net/ <<< Before replacing with Password
+mongodb+srv://fumika0523:Apple2021@cluster0.jjh1i.mongodb.net/ 
+
+
+mongodb+srv://fumika0523:Apple2021@cluster0.jjh1i.mongodb.net/ 
+
+//local
+//mongodb://127.0.0.1:27017/dbname
+//local_mongo_url=mongodb://127.0.0.1:27017/fumika01_mongoose
+
+//cloud
+//mongodb+srv://fumika0523:Apple2021@cluster0.jjh1i.mongodb.net/
+//cloud_mongo_url=mongodb+srv://fumika0523:Apple2021@cluster0.jjh1i.mongodb.net/ 
+
+Collections can be found in Database > Collections Tab.
+
+Q:What do we do with a MongoDB connection string in a VS code if we want to create a DB?
+>> We will use the connection string along with the DB name
+
+WE SHOULD NOT MISS DBNAME after MongoDB connection string.
+
+-----
+Cors & dotenv are the important
+
+https://portswigger.net/web-security/cors#:~:text=Cross%2Dorigin%20resource%20sharing%20(CORS)%20is%20a%20browser%20mechanism,outside%20of%20a%20given%20domain
+
+Cross-origin resource sharing(CORS) is a browser mechanism which enables controlled access to resource located outside of a given domain
+The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers
+
+npm i corse
+
+https://www.npmjs.com/package/dotenv
+
+npm i dotenv
+
+Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology.
+
+
+
+

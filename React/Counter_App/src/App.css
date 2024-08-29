@@ -1,0 +1,33 @@
+.content{
+    text-align: center;
+}
+
+.btnDesign1{
+    font-size: 25px;
+    padding: 1% 1.5%;
+    background-color: darkorange;
+}
+.btnDesign2{
+    font-size: 25px;
+    margin-left: 19%;
+    padding: 1% 1.5%;
+    background-color: rgb(4, 4, 156);
+    color: white;
+}  
+.design{
+    display:flex;
+    justify-content: center;
+    margin-top: 4%;
+    border: 1px solid black;
+    width: 45%;
+    margin-left: 27%;
+    height:230px ;
+    align-items: center;
+    background-color: lightyellow;
+}
+.design1{
+    display:flex;
+}
+
+/* //Create normal Home Boostrap Webpage */
+/* Re-create both Apps, counter using fontawesome & thums using fontawesome */

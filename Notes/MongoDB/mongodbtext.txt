@@ -1,0 +1,178 @@
+mongoDB
+- Install : https://www.mongodb.com/try/download/community-kubernetes-operator
+- https://www.mongodb.com/try/download/shell  <<<< Unzip
+--- Folder >>>>> Bin 
+Copy mongosh.exe from a installed file and paste into bin (extracted folder)
+-- C:\Program Files\MongoDB\Server\7.0\bin
+run command > mongosh > run 
+
+show dbs (it shows all the database available in a local system)★
+
+use fumikadb (created fumikadb as a databese)
+db.dropDatabase()  <<<---- dropping a specific data base when you created a wrong database name
+
+show dbs (show the all database)
+
+db.createCollection("test12") >> created the collection called test12
+
+show collections (showing all collections in a specific database)
+
+db.test2.drop() ----> (when you need to drop collection from a specific db)
+show collections (check again if its been dropped)
+
+cls --- clear everything in command
+
+insertOne({})
+fummikadb> show collections
+
+fummikadb> db.createCollection("users")
+{ ok: 1 }
+fummikadb> show collections
+users
+fummikadb> db.users.insertOne({"name":"fumika","age":22})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66984c4a81de16badcc4e49b')
+}
+fummikadb> db.users.find({})
+[
+  {
+    _id: ObjectId('66984c4a81de16badcc4e49b'),
+    name: 'fumika',
+    age: 22
+  }
+]
+fummikadb> db.users.insertOne({"name":"Poonam","age":21}) <<- inserting a data
+{
+  acknowledged: true,
+  insertedId: ObjectId('66984c8081de16badcc4e49c')
+}
+fummikadb> db.users.insertOne({"name":"John","age":30})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66984c9c81de16badcc4e49d')
+}
+fummikadb> db.users.find({}) <<< find all data in users
+[
+  {
+    _id: ObjectId('66984c4a81de16badcc4e49b'),
+    name: 'fumika',
+    age: 22
+  },
+  {
+    _id: ObjectId('66984c8081de16badcc4e49c'),
+    name: 'Poonam',
+    age: 21
+  },
+  { _id: ObjectId('66984c9c81de16badcc4e49d'), name: 'John', age: 30 }
+]
+fummikadb>
+
+
+>insertMany([{},{},{}])
+db.collectionName.insertManyy([
+{"key1":"value1","key2":"values"},
+{"key1":"value1","key2":"values"},
+{"key1":"value1","key2":"values"},
+{"key1":"value1","key2":"values"},
+{"key1":"value1","key2":"values"},
+])
+
+insertMany([{},{},{}])
+db.users.insertMany([
+{"name":"Bob","age":25},
+{"name":"Charlie","age":30},
+{"name":"Eve","age":35},
+{"name":"Smith","age":22},
+{"name":"Sam","age":17},
+])
+....
+
+db.clothing.insertMany([
+{"product":"T-shirt","price":"10$"},
+{"product":"Dress","price":"30$"},
+{"product":"Suit","price":"100$"},
+{"product":"Jeans","price":"30$"},
+{"product":"Underwear","price":"20$"},
+{"product":"Tops","price":"45$"},
+{"product":"Shorts","price":"30$"},
+{"product":"Skirt","price":"50$"},
+{"product":"Tanktop","price":"20$"},
+{"product":"Shoes","price":"60$"},
+])
+
+db.clothing.insertMany([
+{_id:"1","product":"T-shirt1","price":"10$"},
+{_id:"2","product":"Dress1","price":"30$"},
+])
+
+db.clothing.insertMany([
+{id:"1","product":"T-shirt1","price":"10$"},
+{id:"2","product":"Dress1","price":"30$"},
+])
+
+------
+CRUD
+CREATE > INSERT THE DATA > insertOne({})	|| insertMany([])
+READ	> RETRIEVE  THE DATA > findOne({})	|| find({})
+UPDATE  >> UPDATE THE DATA >>updateOne({},{$set:{}})
+DELETE	>> DELETE THE DATA >>deleteOne({})
+
+db.collectionName.findOne({WHERE CLAUSE})  
+db.user.findOne({"name":"Bob"})  << Shows only 1st data that has name:Bob
+db.user.find({"name":"Bob"}) <<< Shows all data that has name:Bob
+
+---
+db.clothing.insertMany([
+{id:"10","product":"Shirt","price":"60$"},
+{id:"20","product":"Skirt2","price":"60$"},
+{id:"30","product":"Dress4","price":"60$"},
+])
+
+-----------
+db.collectionName.updateOne({WHERE CLAUSE},{Update the values using $set:{}})
+db.users.updateOne({"name":"Bob"},{$set:{"name":"Fumika"}})
+db.clothing.updateOne({"product":"Shoes"},{$set:{"product":"Shows100"}})
+db.clothing.updateOne({"price":"30$"},{$set:{"product":"Dress5"}})  
+db.clothing.insertMany([
+{id:"10","product":"Jeans10","price":"20$"},
+{id:"20","product":"Jeans20","price":"20$"},
+{id:"30","product":"Jeans40","price":"20$"},
+])
+
+----
+
+db.clothing.updateOne({"price":"60$"},{$set:{"price":"40$"}})
+db.clothing.updateMany({"price":"60$"},{$set:{price:"40$"}})
+db.clothing.updateMany({"price":"40$"},{$set:{"product":"NewBrand"}})
+db.clothing.updateMany({"price":"10$"},{$set:{"product":"tunics"}})
+db.users.find({name:"John"})
+db.users.updateOne({"name":"John"},{$set:{"age":"31"}})
+
+
+--
+DELETE
+db.collectionName.deleteOne({WHERE clause})
+db.clothing.deleteOne({"product":"NewBrand"})// first come first serve
+db.clothing.deleteMany({"product":"NewBrand"})
+
+---
+db.Movie.insertOne({"Title":"Toy Story","Director":"John Lasseter", "Year":"1995"})
+db.Movie.insertMany([{"Title":"A Bug's Life","Director":"El Directore", "Year":"1998"},
+{"Title":"Toy Story2","Director":"John Lasseter", "Year":"1889"},
+{"Title":"Monsters, Inc.","Director":"Pete Docter", "Year":"1877"},
+{"Title":"Finding Nemo","Director":"Andew Stanton", "Year":"2003"},
+{"Title":"Tatatouille","Director":"Brad Bird", "Year":"2007"},
+{"Title":"WALL-E","Director":"Andrew Stanton", "Year":"2008"}]
+)
+--
+db.Movie.updateOne({"Title":"Toy Story"}, {$set:{"Title":"Toy Story10"}})
+db.Movie.updateMany({"Director":"Andew Stanton"},{$set:{"Director":"Andew Stanton"}})
+db.Movie.deleteOne({"Title":"Finding Nemo"})
+db.Movie.deleteMany({"Title":"Tatatouille"},
+{"Title":"WALL-E"})
+
+---------
+db.MovieData.find({})#
+
+db.clothing.insertOne({"product":"tunics2","price":"10$"})
