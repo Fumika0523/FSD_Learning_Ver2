@@ -1,0 +1,35 @@
+// user1 > 5 task
+//user2 > 10 task
+// user3 > 5 task
+
+Total >> 20 task
+
+Ideally it should be user specific task 
+user task relationship model
+
+relationship
+user > separate
+task > separate
+
+
+task > userid >> user
+
+user > taskid >> task
+
+easiest wsay ?
+
+regostered an task >> userid:
+/addtask >> task generated (req.body) + auth .... + userid
+res.send{(task,userid)}
+
+not going to create relationship
+>>>>>
+create an relationship
+virtual field
+
+Taskmodel >> userid (updated our model)
+ >create a relationship between the collection
+    > Task + user
+    > User_id-(Task) + Virtual Field - (User Model)
+
+    

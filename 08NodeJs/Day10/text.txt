@@ -1,0 +1,21 @@
+asc >1
+desc >-1
+fieldname || 1/-1
+
+options:{
+    sort:{
+    fieldname:1 or fieldname:-1
+    completed:1 or completed:-1
+    createdAt:1 or createdAt:-1
+}
+}
+
+//static one
+//using the url
+// query string
+?fumika=nodejs >> fieldname
+?sortBy=createdAt_asc
+?sortBy=createdAt_desc
+or
+?sortBy=createdAt:asc
+?sortBy=createdAt:desc
