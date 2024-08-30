@@ -24,12 +24,19 @@ app.get('/',(req,res)=>{
     res.send("Hello Express!")
 })
 
-//registereed a middleware
+//MULTER > FILE/IMAGE UPLOAD
+//we want some data to be sent out >> what method would be used >> POST
+const multer=require('multer')
+//in which folder, I want all the image to be shown?
+const upload=multer({
+    dest:"images/"
+})
 
-// app.use((req,res,next)=>{
-//     console.log(req.method)
-//     res.send({message:"Site is currently Down!! Re-visit after sometime!"})
-// })
+//automatically destination "images" file is created
+app.post('/uploadprofile',upload.single('avatar'),(req,res)=>{
+    res.send("File Uploaded Successfully")
+})
+//when you get the image, add the extension ".jpg" in the last
 
 //API URLS
 app.use(userRoute)

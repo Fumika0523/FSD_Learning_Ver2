@@ -1,0 +1,38 @@
+https://www.npmjs.com/package/multer
+install the package: npm I multer
+
+in index.js:
+
+const multer=require('multer')
+const upload=multer({
+dest:"images/"  <<<<<<<<<in which folder, do I want the image to b shown?
+})
+
+add.post('/uploadprofile',upload.single('avatar'),(req,res)=>{
+	res.send("File uploaded successfully)  <<<< message is shown in Postman
+})
+
+*When you get the image, add the extension (ex:".jpg","jpeg"..etc) in the last
+
+--------------------
+
+userRoute.js
+
+Upload image:
+const multer=require('multer')
+const upload=multer({
+dest:"profileImages/", 	<<<< the destination that you wanna upload your image
+limits:{
+	fileSize:1000000 <<<1MB  << IF you wanna limite the filesize
+},
+
+function to control which files are accepted
+fileFilter(req,file,cb){
+console.log(file.originalname)	<<< consoling in VScode terminal
+       let fileNameVal=file.originalname.endsWith(".jpg")||file.originalname.endsWith(".jpeg")||file.originalname.endsWith(".png" <<<<< get the file original name  <<endWith : Boolean method to check the file type
+        if(!fileNameVal){
+            console.log("Please re-upload a correct file") <<< only for VS code to show message
+
+        }
+    }
+})

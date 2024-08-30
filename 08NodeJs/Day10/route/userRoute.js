@@ -136,4 +136,27 @@ try{
 }
 })
 
+
+//upload image
+const multer=require('multer')
+const upload=multer({
+    dest:"profileImages/",
+    limits:{
+        fileSize:1000000 //1MB
+    },
+
+    //function to control which files are accepted
+    fileFilter(req,file,cb){
+        console.log(file.originalname)
+        let fileNameVal=file.originalname.endsWith(".jpg")||file.originalname.endsWith(".jpeg")||file.originalname.endsWith(".png")//get the file original name
+        if(!fileNameVal){
+            console.log("Please re-upload a correct file") 
+        }
+    }
+})
+
+router.post('/user/profile/upload',upload.single('avatar'),(req,res)=>{
+    res.send("File Uploaded Successfully")
+})
+
 module.exports = router
