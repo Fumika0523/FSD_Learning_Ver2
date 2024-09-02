@@ -20,6 +20,15 @@ userRoute.js
 
 Upload image:
 const multer=require('multer')
+//create a variable called upload, to store the multer method and hence this multer method will be used.this multer method contains the object where all the validation has to b passed related to the file which we are uploading
+-dest >> takes an object, stores all the images, it takes a path where all the images we want to store
+-limit >> takes an object, fileSize of the file which we are uploading (ex: 1000000 <<<1MB) accordingly we can put the values as per our application requirement
+-fileFilter >> this is a function/method. 
+it takes parameters >>> (req,file,cb) ,
+file >> this is the file which we are uploading
+cb >> cb is the place where we will mention our error
+-endWith : Boolean method to check the file type
+
 const upload=multer({
 dest:"profileImages/", 	<<<< the destination that you wanna upload your image
 limits:{
@@ -29,10 +38,30 @@ limits:{
 function to control which files are accepted
 fileFilter(req,file,cb){
 console.log(file.originalname)	<<< consoling in VScode terminal
-       let fileNameVal=file.originalname.endsWith(".jpg")||file.originalname.endsWith(".jpeg")||file.originalname.endsWith(".png" <<<<< get the file original name  <<endWith : Boolean method to check the file type
-        if(!fileNameVal){
-            console.log("Please re-upload a correct file") <<< only for VS code to show message
-
+       let fileNameVal=file.originalname.endsWith(".jpg")||file.originalname.endsWith(".jpeg")||file.originalname.endsWith(".png" <<<<< get the file original name  
+         if(fileNameVal){
+            console.log("File is uploaded") 
+        }else{
+            //error
+            console.log("Please upload a correct file")
+            return cb(new Error("Please upload a correct file")) //throw new Error("")
         }
+        cb(undefined,true) // null|| undefined, << to accept the file pass 'true' 
     }
 })
+
+
+- upload.single() >>> its a method given by multer, we are storing multer method in upload variable, all the features and methods of the multer method can b directly used by using upload variable. this upload provides a single method (upload.single())
+upload.single() takes 1 argument, which we pass it from postman(front-end) since it is a post request, we have to the pass it inside the Body, then inside the form-data, update the key as that argument, 
+EXAMPLE)
+key will be avatar and value will be the file uploaded.
+that key name we have to pass it to the upload.single('avatar')
+
+
+router.post('/user/profile/upload',upload.single('avatar'),(req,res)=>{
+    res.send({message:"File Uploaded Successfully"})
+},(error,req,res,next)=>{ //error:{message} due to multer thats why the different way to show a error message.
+    res.send({showError:error.message})
+})
+
+

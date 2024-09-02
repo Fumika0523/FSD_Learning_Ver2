@@ -140,7 +140,8 @@ try{
 //upload image
 const multer=require('multer')
 const upload=multer({
-    dest:"profileImages/",
+    // dest:"profileImages/", //upload in DB this wont be there
+    
     limits:{
         fileSize:1000000 //1MB
     },
@@ -148,7 +149,7 @@ const upload=multer({
     //function to control which files are accepted
     fileFilter(req,file,cb){
         console.log(file.originalname)
-        let fileNameVal=file.originalname.endsWith(".jpg")||file.originalname.endsWith(".jpeg")||file.originalname.endsWith(".png")//get the file original name
+        let fileNameVal=file.originalname.endsWith(".jpg")||file.originalname.endsWith(".jpeg")||file.originalname.endsWith(".png")||file.originalname.endsWith(".JPG")//get the file original name
         if(fileNameVal){
             console.log("File is uploaded") 
         }else{
@@ -160,8 +161,11 @@ const upload=multer({
     }
 })
 
-router.post('/user/profile/upload',upload.single('avatar'),(req,res)=>{
-    res.send({message:"File Uploaded Successfully"})
+router.post('/user/profile/upload',auth,upload.single('avatar'),async(req,res)=>{
+    res.send({message:"File Uploaded Successfully"}) //req >> sending to server, file >> provided by multer holding file, buffer >> holding binary data
+    req.user.avatar=req.file.buffer
+    //req.file.buffer >> hold the binary data
+    await req.user.save()
 },(error,req,res,next)=>{ //error:{message} due to multer thats why the different way to show a error message.
     res.send({showError:error.message})
 })
