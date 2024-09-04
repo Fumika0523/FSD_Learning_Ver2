@@ -3,6 +3,7 @@ const express = require ('express')
 const router = express.Router()
 const bcrypt = require('bcryptjs')
 const auth = require('../middleware/auth')
+const sharp = require('sharp') 
 
 //POST  >> SignUP + SignIN
 //A account already exists with this email address, please signi in using it
@@ -55,7 +56,7 @@ router.post('/signin',async(req,res)=>{
          res.send({
             message:"you have successfully signed in!", 
             user:user,      //print a user detail
-            token:token     
+            token:token,
          })    
     }
     }catch(e){
@@ -68,11 +69,19 @@ router.post('/signin',async(req,res)=>{
 //GET
 // auth allowing me to get the signed in user
 router.get('/users/profile',auth,async(req,res)=>{
-    console.log(req.token)
-    console.log(req.user)
-    const getProfile = await User.findById(req.user._id)
+    try{
+    //console.log(req.token)
+    //console.log(req.user)
+        const getProfile = await User.findById(req.user._id)
+    if(!getProfile){res.send({
+        message:"The User Profile Cannot Be found."})
+    }
     res.send(getProfile)
-    })
+    }catch(e){
+        res.send({message:"Some Internal Error"})
+    }
+})
+    
 // ex:router.get('/users',>> server is down (middleware is called))
 // ex:router.post('/signin' >> server is down(middleware is called))
 
@@ -95,7 +104,7 @@ res.send(
 }
 })
 
-//UPDATE
+//UPDATE 
 router.put('/users/profile', auth, async(req,res)=>{
     try{
         console.log("Update Profile Id",req.user._id)// auth why will I pass from url
@@ -112,8 +121,8 @@ router.put('/users/profile', auth, async(req,res)=>{
     }catch(e){
         res.send({message:"Some Internal Error"})
     }
-
 })
+
 
 //DELETE
 router.delete('/users/profile',auth,async(req,res)=>{
@@ -149,7 +158,7 @@ const upload=multer({
     //function to control which files are accepted
     fileFilter(req,file,cb){
         console.log(file.originalname)
-        let fileNameVal=file.originalname.endsWith(".jpg")||file.originalname.endsWith(".jpeg")||file.originalname.endsWith(".png")||file.originalname.endsWith(".JPG")//get the file original name
+        let fileNameVal=file.originalname.endsWith(".jpg")||file.originalname.endsWith(".jpeg")||file.originalname.endsWith(".png")||file.originalname.endsWith(".JPG")||file.originalname.endsWith(".avif")//get the file original name
         if(fileNameVal){
             console.log("File is uploaded") 
         }else{
@@ -161,14 +170,69 @@ const upload=multer({
     }
 })
 
-router.post('/user/profile/upload',auth,upload.single('avatar'),async(req,res)=>{
-    res.send({message:"File Uploaded Successfully"}) //req >> sending to server, file >> provided by multer holding file, buffer >> holding binary data
-    req.user.avatar=req.file.buffer
-    //req.file.buffer >> hold the binary data
-    await req.user.save()
-},(error,req,res,next)=>{ //error:{message} due to multer thats why the different way to show a error message.
+// update + image
+//upadte + add a profile image
+router.post('/user/profile/upload/image',auth,upload.single('avatar'),async(req,res)=>{
+    try{
+        const buffer = await sharp (req.file.buffer).resize({width:100,height:100}).png().toBuffer()
+        //req.user.avatar=req.file.buffer // directly updating
+        req.user.avatar = buffer
+        await req.user.save()
+        if(buffer){
+        res.send({message:"File Uploaded Successfully"})
+    }
+        //req.file.buffer >> hold the binary data
+    }catch(e){
+        console.log(e)
+    }
+},(error,req,res,next)=>{
     res.send({showError:error.message})
+    })
+
+//delete the profrofile image
+//delete method
+// user specific > auth > middleware ||
+
+router.delete('/users/profile/upload/delete',auth,upload.single('avatar'),async(req,res)=>{
+     try{
+    //req.user -->auth
+    //res.send(req.user.avatar)
+    req.user.avatar = undefined // empty the avatar detail
+    await req.user.save() // save to db
+    console.log(req.user.avatar) //undefined
+    if(req.user.avatar==undefined){
+     res.send({
+    "user":req.user,
+    "message":"Profile Image deleted successfully"
+    })
+    }else{
+    res.send({message:"Could not delete the image, please re-check the code"})
+    }
+    }catch(e){
+        console.log(e)
+    }
+})
+
+//get the profile image
+router.get('/users/profile/image',auth,upload.single('avatar'),async(req,res)=>{
+    try{
+        const image =  res.set("Content-Type","image/png")
+        if(image){
+          return res.send(req.user.avatar) // if you not using else >> use return ... 
+            //res.send(req.user)
+            //console.log(req.user.avatar)
+        }res.send({
+            message:"please check again"
+        })
+    }catch(e){
+        console.log(e)
+    }
 })
 
 
 module.exports = router
+
+
+//how can our nodejs + express help to send a emails
+
+// every 5 users have different profile images, 
